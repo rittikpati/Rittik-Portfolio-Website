@@ -11,7 +11,7 @@ import Leadership from './components/Leadership.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
-const MAX_BG_OPACITY = 0.5
+const MAX_BG_OPACITY = 0.7
 
 function setupScrollEffects() {
   const revealObserver = new IntersectionObserver(
@@ -31,7 +31,6 @@ function setupScrollEffects() {
 
   const bg1 = document.getElementById('bg-stage-1')
   const bg2 = document.getElementById('bg-stage-2')
-  const bg3 = document.getElementById('bg-stage-3')
 
   const onScroll = () => {
     const scrollY = window.scrollY
@@ -48,20 +47,13 @@ function setupScrollEffects() {
 
     const scrollPercent = Math.min(Math.max(scrollY / maxScroll, 0), 1)
 
-    if (scrollPercent < 0.33) {
+    if (scrollPercent < 0.5) {
       bg1.style.opacity = MAX_BG_OPACITY
       bg2.style.opacity = 0
-      bg3.style.opacity = 0
-    } else if (scrollPercent < 0.66) {
-      const localP = (scrollPercent - 0.33) / 0.33
+    } else {
+      const localP = (scrollPercent - 0.5) / 0.5
       bg1.style.opacity = MAX_BG_OPACITY * (1 - localP)
       bg2.style.opacity = MAX_BG_OPACITY * localP
-      bg3.style.opacity = 0
-    } else {
-      const localP = (scrollPercent - 0.66) / 0.34
-      bg1.style.opacity = 0
-      bg2.style.opacity = MAX_BG_OPACITY * (1 - localP)
-      bg3.style.opacity = MAX_BG_OPACITY * localP
     }
   }
 
