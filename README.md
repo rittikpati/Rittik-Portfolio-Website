@@ -11,6 +11,17 @@ Personal portfolio website for **Rittik Pati — AI/ML Engineer**, built with Re
 
 ## Getting Started
 
+### Local Preview (your machine only)
+
+```bash
+npm install
+npm run build
+```
+
+Then open **http://localhost:8000** in your browser.
+
+> **Note:** `localhost` links only work on the machine running the site. Visitors to your GitHub repository cannot open them — this is for local development only.
+
 ### Prerequisites
 
 - Node.js 18 or higher
@@ -28,7 +39,7 @@ npm install
 npm run dev
 ```
 
-Runs the app in development mode with hot reload. Open http://localhost:5173 to view it.
+Runs the app in development mode with hot reload. Vite will print the local dev server URL in your terminal.
 
 ### Production Build
 
