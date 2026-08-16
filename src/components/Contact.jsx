@@ -10,8 +10,8 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
-            Currently seeking full-time opportunities in Machine Learning and Data Engineering. My
-            inbox is always open.
+            Passionate about building production-grade AI systems — always up for meaningful
+            collaborations and challenging engineering problems.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
@@ -27,6 +27,14 @@ export default function Contact() {
               target="_blank"
             >
               LinkedIn Profile
+            </a>
+            <a
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-surface/40 backdrop-blur-md border border-primary/20 text-primary rounded font-body-md text-body-md hover:bg-surface-bright/50 transition-colors"
+              href="https://www.instagram.com/rittikpati/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span className="material-symbols-outlined">photo_camera</span> Instagram
             </a>
           </div>
         </div>

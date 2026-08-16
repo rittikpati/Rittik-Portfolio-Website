@@ -119,7 +119,7 @@ const KNOWLEDGE_BASE = [
     answer:
       "Rittik Pati is an aspiring AI Engineer specializing in Retrieval-Augmented Generation (RAG) and Agentic AI. He is currently pursuing a B.Tech in CSE (AI & ML) at Chandigarh University (2023–2027, CGPA 8.2/10) and has worked as an AI Business Solutions Architect Intern at YuvaIntern and a Full Stack Development Intern at Thiranex.",
     extended:
-      "More about him: Rittik focuses on LLM engineering and generative AI, has published research on low-resource neural machine translation and federated learning, and holds certifications from Oracle, MongoDB University and Microsoft. He's currently seeking full-time opportunities in Machine Learning and Data Engineering.",
+      "More about him: Rittik focuses on LLM engineering and generative AI, has built an AI-powered CRM (RittikDesk AI), and holds certifications from Oracle, MongoDB University and Microsoft. He's focused on building RAG and agentic AI systems that deliver real business value.",
   },
   {
     keywords: ['skills', 'technical', 'stack', 'technologies', 'proficient', 'good at', 'capable', 'tools', 'expertise', 'competencies'],
@@ -138,7 +138,7 @@ const KNOWLEDGE_BASE = [
     answer:
       "Rittik has two internships: (1) AI Business Solutions Architect Intern at YuvaIntern (Aug 2026 – Present) — integrated DeepSeek API and RAG workflows into enterprise solutions, reducing query latency by 35%. (2) Intern - Full Stack Development at Thiranex (Jul 2026 – Aug 2026) — project-based remote internship working on practical full-stack projects under industry mentorship. You can view both offer letters from the Experience section.",
     extended:
-      "Both internships are remote. His current focus is building RAG and agentic AI workflows, and he is open to new opportunities in ML and data engineering.",
+      "Both internships are remote. His current focus is building RAG and agentic AI workflows that cut query latency and improve response quality at enterprise scale.",
   },
   {
     keywords: ['education', 'university', 'college', 'degree', 'b.tech', 'study', 'studying', 'cgpa', 'academic', 'chandigarh', 'graduate', 'graduation', 'pass out', 'passout'],
@@ -158,11 +158,6 @@ const KNOWLEDGE_BASE = [
       "Rittik holds: Oracle Agentic AI Foundations Associate (2026), Building RAG Applications Using MongoDB (July 2026), and Microsoft: AI Solutions & Azure Cloud Fundamentals (2025).",
   },
   {
-    keywords: ['research', 'publication', 'paper', 'arxiv', 'iclr', 'published', 'academic work', 'papers'],
-    answer:
-      "Rittik has published research on low-resource neural machine translation (ICLR 2023 Workshop) and communication-efficient federated learning via model pruning (arXiv preprint) — you can find both in the Research & Publications section.",
-  },
-  {
     keywords: ['leadership', 'mentor', 'mentorship', 'open source', 'open-source', 'community', 'students', 'teaching', 'guide', 'volunteer'],
     answer:
       "Rittik led engineering mentorship for over 50 students in his university's AI student group — organizing weekly code reviews and architecture deep-dives — and actively contributes to open-source ML libraries, focusing on data loading pipelines and documentation.",
@@ -170,7 +165,7 @@ const KNOWLEDGE_BASE = [
   {
     keywords: ['strength', 'strengths', 'strong at', 'why hire', 'hire him', 'why should i', 'advantage', 'good candidate', 'best at', 'unique'],
     answer:
-      "Rittik's strongest areas are RAG and Agentic AI engineering — he combines production full-stack skills (Django, React, Docker, AWS) with real LLM integration experience (DeepSeek API) and has proven, measurable results: a 35% reduction in query latency at YuvaIntern. He's currently seeking full-time ML and Data Engineering roles.",
+      "Rittik's strongest areas are RAG and Agentic AI engineering — he combines production full-stack skills (Django, React, Docker, AWS) with real LLM integration experience (DeepSeek API) and has proven, measurable results: a 35% reduction in query latency at YuvaIntern. He's currently shipping AI products end-to-end and taking on bigger engineering challenges.",
   },
   {
     keywords: ['weakness', 'weaknesses', 'bad at', 'not good', 'improve'],
@@ -178,11 +173,11 @@ const KNOWLEDGE_BASE = [
       "Like any engineer early in his career, Rittik is still deepening his expertise in production-scale distributed systems — but he's actively growing through real internships and building LLM applications end-to-end. Ask him about it directly at rittikpati434@gmail.com!",
   },
   {
-    keywords: ['contact', 'email', 'reach', 'hire', 'hiring', 'linkedin', 'github', 'social', 'connect', 'availability', 'available', 'call', 'whatsapp', 'message', 'interview', 'recruiter', 'recruiting'],
+    keywords: ['contact', 'email', 'reach', 'hire', 'hiring', 'linkedin', 'github', 'instagram', 'social', 'connect', 'availability', 'available', 'call', 'whatsapp', 'message', 'interview', 'recruiter', 'recruiting', 'insta', 'ig'],
     answer:
-      "You can reach Rittik at rittikpati434@gmail.com. His LinkedIn is linkedin.com/in/rittik-pati-229389290 and GitHub is github.com/rittikpati. He is currently seeking full-time opportunities in Machine Learning and Data Engineering — his inbox is always open.",
+      "You can reach Rittik at rittikpati434@gmail.com. His LinkedIn is https://www.linkedin.com/in/rittik-pati-229389290, GitHub is https://github.com/rittikpati, and Instagram is https://www.instagram.com/rittikpati/. He's always happy to talk AI engineering — reach out any time.",
     extended:
-      "For recruiters: the fastest way is email (rittikpati434@gmail.com) or a LinkedIn connection request. He usually responds within a day.",
+      "For recruiters: the fastest way is email (rittikpati434@gmail.com) or a LinkedIn connection request. For a more casual look at his life and updates, follow his Instagram at https://www.instagram.com/rittikpati/. He usually responds within a day.",
   },
   {
     keywords: ['resume', 'cv', 'download resume', 'offer letter', 'letter', 'document'],
@@ -197,12 +192,12 @@ const KNOWLEDGE_BASE = [
   {
     keywords: ['navigate', 'sections', 'how to use this website', 'how to browse', 'menu', 'pages'],
     answer:
-      "This is a single-page site: use the top navigation (Projects, Skills, Experience, Contact) or simply scroll — sections appear in order: Projects, Skills, Experience, Research, Certifications, Leadership, Contact. The chat button stays at the bottom-right on every screen.",
+      "This is a single-page site: use the top navigation (Projects, Skills, Experience, Contact) or simply scroll — sections appear in order: Projects, Skills, Experience, Certifications, Leadership, Contact. The chat button stays at the bottom-right on every screen.",
   },
   {
     keywords: ['location', 'where', 'based', 'country', 'india', 'live', 'remote', 'city', 'timezone'],
     answer:
-      "Rittik is based in India and works fully remotely. He's open to remote full-time roles in Machine Learning, Generative AI, and Data Engineering.",
+      "Rittik is based in India and works fully remotely, collaborating with teams across time zones.",
   },
   {
     keywords: ['salary', 'ctc', 'compensation', 'pay', 'stipend', 'expectation', 'package'],
@@ -212,7 +207,7 @@ const KNOWLEDGE_BASE = [
   {
     keywords: ['goal', 'future', 'ambition', 'plan', 'aspiration', 'dream', 'looking for', 'seeking', 'want to do', 'career goal'],
     answer:
-      "Rittik's goal is to grow as an AI/LLM Engineer — building production RAG systems and agentic AI solutions. He is currently seeking full-time opportunities in Machine Learning and Data Engineering.",
+      "Rittik's goal is to grow as an AI/LLM Engineer — building production RAG systems and agentic AI solutions that create measurable business impact.",
   },
   {
     keywords: ['currently', 'right now', 'now working', 'day to day', 'daily', 'what is he doing', 'current work'],

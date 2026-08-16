@@ -1,6 +1,7 @@
 const FOOTER_LINKS = [
   { label: 'GitHub', href: 'https://github.com/rittikpati' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/rittik-pati-229389290/' },
+  { label: 'Instagram', href: 'https://www.instagram.com/rittikpati/' },
   { label: 'Email', href: 'mailto:rittikpati434@gmail.com' },
 ]
 
