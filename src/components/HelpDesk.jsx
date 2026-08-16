@@ -35,6 +35,12 @@ const NOT_IN_RESUME = [
   'laravel', 'spring', 'spring boot', 'c', 'r', 'scala', 'perl', 'matlab', 'unity',
 ]
 
+const UNKNOWN_TECH_WORDS = [
+  'power bi', 'tableau', 'sap', 'opencv', 'selenium', 'blender',
+  'figma', 'photoshop', 'dart', 'solidity', 'haskell', 'clojure', 'cobol',
+  'fortran', 'delphi', 'lua', 'julia', 'twilio', 'stripe',
+]
+
 const CONCEPTS = [
   {
     keywords: ['rag', 'retrieval-augmented', 'retrieval augmented'],
@@ -111,6 +117,81 @@ const CONCEPTS = [
     answer:
       "A CRM (Customer Relationship Management) system manages customer data, sales and interactions. RittikDesk AI — his flagship project — is an AI-powered CRM built with Django, React and Docker.",
   },
+  {
+    keywords: ['embedding', 'embeddings'],
+    answer:
+      "An embedding is a numerical vector representation of text — words or documents with similar meaning end up close together in vector space. Embeddings power the similarity search behind RAG. Rittik uses them with ChromaDB and Pinecone to build retrieval pipelines.",
+  },
+  {
+    keywords: ['hallucination', 'hallucinations', 'making things up'],
+    answer:
+      "A hallucination is when an LLM confidently produces incorrect or made-up information. RAG reduces hallucinations by grounding answers in retrieved documents — exactly the kind of system Rittik builds.",
+  },
+  {
+    keywords: ['token', 'tokens', 'tokenization'],
+    answer:
+      "A token is the basic unit an LLM processes — roughly a short word or word fragment. Token counts determine context limits and API costs. Rittik optimizes token usage in his DeepSeek API integrations to keep RAG pipelines fast and affordable.",
+  },
+  {
+    keywords: ['context window', 'context length', 'context size'],
+    answer:
+      "The context window is how much text an LLM can consider at once — your prompt plus retrieved documents plus the model's reply. RAG pipelines must fit inside it — Rittik engineers chunking and retrieval to make the most of the window.",
+  },
+  {
+    keywords: ['temperature', 'sampling', 'creativity setting'],
+    answer:
+      "Temperature controls LLM randomness: low values give focused, deterministic answers; high values give more creative variety. Rittik tunes it per use case — lower for factual RAG answers, higher for creative tasks.",
+  },
+  {
+    keywords: ['tool calling', 'function calling', 'tool use', 'tool usage'],
+    answer:
+      "Tool/function calling lets an LLM request external actions — database queries, API calls, calculations — and then reason about the results. It's the core mechanism behind Agentic AI, one of Rittik's specializations.",
+  },
+  {
+    keywords: ['chunking', 'chunks', 'splitting documents', 'text split'],
+    answer:
+      "Chunking splits documents into small, searchable pieces before embedding them. Chunk size and overlap heavily affect RAG quality — it's one of the first things Rittik tunes when building a retrieval pipeline.",
+  },
+  {
+    keywords: ['similarity search', 'semantic search', 'knn', 'nearest neighbor', 'vector search'],
+    answer:
+      "Similarity search finds the vectors closest to a query in vector space, retrieving the most relevant document chunks — the retrieval half of RAG. Rittik builds this on ChromaDB and Pinecone.",
+  },
+  {
+    keywords: ['hybrid search', 'hybrid retrieval'],
+    answer:
+      "Hybrid search combines vector (semantic) search with traditional keyword matching, covering both meaning and exact terms — a popular upgrade to plain RAG that improves recall on precise queries.",
+  },
+  {
+    keywords: ['reranking', 'rerank', 'cross-encoder'],
+    answer:
+      "Reranking re-scores retrieved chunks with a more powerful model after initial retrieval, keeping only the most relevant ones. It's a strong quality boost for RAG systems.",
+  },
+  {
+    keywords: ['deepseek'],
+    answer:
+      "DeepSeek is an open-weight LLM family known for strong performance at low cost. Rittik integrates the DeepSeek API into his projects — including RittikDesk AI and his YuvaIntern work — for automated insights and RAG workflows.",
+  },
+  {
+    keywords: ['mcp', 'model context protocol'],
+    answer:
+      "MCP (Model Context Protocol) is an open standard that lets AI applications connect to tools and data sources through a uniform interface. It's the emerging standard for building agentic AI systems — the direction Rittik is heading.",
+  },
+  {
+    keywords: ['prompt injection', 'injection attack'],
+    answer:
+      "Prompt injection is a security attack where hidden instructions in untrusted content try to hijack an LLM's behavior. Defending against it (input sanitization, instruction hierarchy) is essential when deploying production AI systems.",
+  },
+  {
+    keywords: ['streaming', 'token streaming'],
+    answer:
+      "Streaming delivers LLM responses token-by-token as they're generated, so users see output immediately instead of waiting for the full answer — a standard practice in production LLM apps.",
+  },
+  {
+    keywords: ['retrieval', 'retriever', 'retrieval system'],
+    answer:
+      "Retrieval is the stage where relevant documents or chunks are fetched for the LLM to ground its answer. Combined with generation, it forms RAG — Rittik's core specialty.",
+  },
 ]
 
 const KNOWLEDGE_BASE = [
@@ -153,9 +234,14 @@ const KNOWLEDGE_BASE = [
       "RittikDesk AI demonstrates his full-stack ability: Django + React + Docker, with an LLM (DeepSeek) integrated for automated customer insights.",
   },
   {
+    keywords: ['salesforce', 'trailblazer', 'trailhead', 'cloud solution architect', 'ai solution architect', 'salesforce badge', 'salesforce badges'],
+    answer:
+      "Rittik holds advanced-level Salesforce credentials as an AI & Cloud Solution Architect. You can see the badge in the Certifications section of this site — the 'View Badge' button links to his Trailblazer profile.",
+  },
+  {
     keywords: ['certification', 'certificate', 'certified', 'oracle', 'mongodb', 'microsoft', 'azure', 'credential', 'badge', 'courses', 'course'],
     answer:
-      "Rittik holds: Oracle Agentic AI Foundations Associate (2026), Building RAG Applications Using MongoDB (July 2026), and Microsoft: AI Solutions & Azure Cloud Fundamentals (2025).",
+      "Rittik holds: Oracle Cloud Infrastructure Certified Architect Associate (August 2026), Oracle Cloud Infrastructure Certified AI Foundations Associate (August 2026), Oracle Agentic AI Certified Foundations Associate (July 2026), Building RAG Applications Using MongoDB (July 2026), and Microsoft Certified: AI Solutions & Azure Cloud Fundamentals (July 2026). He also completed LinkedIn Learning courses in Generative AI & AI Literacy (July 2026). You can view his certificate PDFs and badges directly from the Certifications section of this site.",
   },
   {
     keywords: ['leadership', 'mentor', 'mentorship', 'open source', 'open-source', 'community', 'students', 'teaching', 'guide', 'volunteer'],
@@ -252,7 +338,7 @@ const KNOWLEDGE_BASE = [
   {
     keywords: ['what can you do', 'help me with', 'your capabilities', 'your features', 'how do you work', 'are you ai', 'are you a bot', 'are you robot', 'who made you', 'who built you', 'who created you', 'what are you', 'your purpose', 'your job', 'your role', 'about you bot'],
     answer:
-      "I'm a smart assistant trained on Rittik's verified portfolio data. I can answer questions about his skills (including 'Does he know X?'), experience, education, projects, certifications, research, and how to contact him — and I can explain AI concepts like RAG and LLMs. I only answer from verified info, so I never guess or make things up.",
+      "I'm a smart assistant trained on Rittik's verified portfolio data. I can answer questions about his skills — including 'Does he know X?', comparisons like 'Python vs Java', and even typo-ridden questions — plus experience, education, projects, certifications, and how to contact him. I can also explain AI concepts like RAG, LLMs, embeddings and agentic AI. I only answer from verified info, so I never guess or make things up.",
   },
   {
     keywords: ['are you human', 'real person', 'is this a real person', 'human or bot'],
@@ -297,17 +383,130 @@ function stem(token) {
   return token
 }
 
-function findTechMatch(question) {
-  const q = normalize(question)
-  for (const entry of TECH_CATEGORIES) {
-    for (const tech of entry.techs) {
-      const escaped = tech.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-      if (new RegExp(`\\b${escaped}\\b`).test(q)) {
-        return { label: tech, category: entry.category, blurb: entry.blurb }
-      }
+function levenshtein(a, b) {
+  if (a === b) return 0
+  const m = a.length
+  const n = b.length
+  if (!m) return n
+  if (!n) return m
+  const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0))
+  for (let i = 0; i <= m; i++) dp[i][0] = i
+  for (let j = 0; j <= n; j++) dp[0][j] = j
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+      )
     }
   }
+  return dp[m][n]
+}
+
+const TECH_LOOKUP = [
+  ...TECH_CATEGORIES.flatMap((entry) =>
+    entry.techs.map((tech) => ({ label: tech, category: entry.category, blurb: entry.blurb, known: true }))
+  ),
+  ...NOT_IN_RESUME.map((tech) => ({ label: tech, known: false })),
+]
+
+function findTechMatches(question) {
+  const q = normalize(question)
+  const found = new Map()
+  for (const item of TECH_LOOKUP) {
+    const escaped = item.label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    if (new RegExp(`\\b${escaped}\\b`).test(q) && !found.has(item.label)) {
+      found.set(item.label, item)
+    }
+  }
+  const tokens = q.split(/[^a-z0-9+.#]+/).filter((t) => t.length >= 4)
+  for (const token of tokens) {
+    if (found.has(token)) continue
+    let best = null
+    let bestDist = Infinity
+    for (const item of TECH_LOOKUP) {
+      if (item.label.length < 4 || item.label.includes(' ') || item.label.includes('.')) continue
+      const dist = levenshtein(token, item.label)
+      const limit = item.label.length <= 5 ? 1 : 2
+      if (dist <= limit && dist < bestDist) {
+        bestDist = dist
+        best = item
+      }
+    }
+    if (best && !found.has(best.label)) found.set(best.label, best)
+  }
+  return [...found.values()]
+}
+
+function findUnknownTech(question) {
+  const q = normalize(question)
+  for (const tech of UNKNOWN_TECH_WORDS) {
+    const escaped = tech.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    if (new RegExp(`\\b${escaped}\\b`).test(q)) return tech
+  }
   return null
+}
+
+function buildComparison(techs) {
+  const known = techs.filter((t) => t.known)
+  const unknown = techs.filter((t) => !t.known)
+  const names = (arr) => arr.map((t) => t.label).join(' and ')
+  if (known.length && unknown.length) {
+    return `${names(known)} ${known.length > 1 ? 'are' : 'is'} part of Rittik's toolkit, but ${names(unknown)} ${unknown.length > 1 ? 'are not' : "isn't"} on his listed skill set. ${known[0].blurb}`
+  }
+  if (known.length) {
+    return `Both are in Rittik's toolkit! ${known.map((t) => `${t.label} (${t.category})`).join(' and ')}. ${known[0].blurb}`
+  }
+  const unknownText = unknown.map((t) => t.label).join(unknown.length > 1 ? ' nor ' : '')
+  return `Neither ${unknownText} is part of Rittik's listed skill set — his toolkit focuses on AI/LLM engineering, full-stack web (Django, React, Node.js) and cloud/DevOps (AWS, Docker, CI/CD).`
+}
+
+function buildCompound(techs) {
+  const labels = techs.map((t) => `${t.label} (${t.category})`)
+  return `Yes — ${labels.join(', ')} are all part of Rittik's toolkit. ${techs[0].blurb}`
+}
+
+function getFollowUps(question) {
+  const q = normalize(question)
+  const chips = []
+  const push = (s) => {
+    if (chips.length < 3 && !chips.includes(s)) chips.push(s)
+  }
+  if (/\b(contact|email|reach|hire|hiring|linkedin|github|instagram|recruit)\b/.test(q)) {
+    push('What is his experience?')
+    push('Where is he based?')
+    push('What are his skills?')
+  } else if (/\b(skill|stack|tech|language|know|proficient|familiar)\b/.test(q)) {
+    push('Does he know Docker?')
+    push('What is RAG?')
+    push('How to contact him?')
+  } else if (/\b(project|built|made|creation|rittikdesk)\b/.test(q)) {
+    push('What is RittikDesk AI?')
+    push('What is Agentic AI?')
+    push('What are his skills?')
+  } else if (/\b(experience|intern|internship|work|yuvaintern|thiranex|job)\b/.test(q)) {
+    push('How to contact him?')
+    push('What are his certifications?')
+    push('What is his education?')
+  } else if (/\b(certif|badge|oracle|mongodb|microsoft|azure|credential)\b/.test(q)) {
+    push('What is his education?')
+    push('How to contact him?')
+    push('What are his skills?')
+  } else if (/\b(education|university|college|degree|b.tech|cgpa|study|graduate)\b/.test(q)) {
+    push('What are his skills?')
+    push('What is his experience?')
+    push('What is RAG?')
+  } else if (/\b(rag|llm|agentic|prompt|vector|langchain|llamaindex|deepseek|embedding|token|hallucin|chunk|retriev|context window)\b/.test(q)) {
+    push('What is Agentic AI?')
+    push('What are his projects?')
+    push('How to contact him?')
+  } else {
+    push('Who is Rittik?')
+    push('What are his skills?')
+    push('How to contact him?')
+  }
+  return chips
 }
 
 function findMissingTech(question) {
@@ -357,8 +556,12 @@ function findBestAnswers(question) {
 }
 
 function composeAnswers(answers) {
-  if (answers.length === 1) return answers[0]
-  return "Here's what I found:\n\n• " + answers.map((a) => a.replace(/\n/g, ' ')).join('\n\n• ')
+  const unique = []
+  for (const a of answers) {
+    if (!unique.some((u) => u.slice(0, 60) === a.slice(0, 60))) unique.push(a)
+  }
+  if (unique.length === 1) return unique[0]
+  return "Here's what I found:\n\n• " + unique.map((a) => a.replace(/\n/g, ' ')).join('\n\n• ')
 }
 
 function renderAnswer(text) {
@@ -392,9 +595,17 @@ export default function HelpDesk() {
   const [messages, setMessages] = useState([{ role: 'bot', text: GREETING }])
   const [input, setInput] = useState('')
   const [typing, setTyping] = useState(false)
+  const [suggestions, setSuggestions] = useState(QUICK_SUGGESTIONS)
   const scrollRef = useRef(null)
   const inputRef = useRef(null)
-  const lastTopicRef = useRef(null)
+  const lastTopicRef = useRef([])
+
+  function clearChat() {
+    lastTopicRef.current = []
+    setMessages([{ role: 'bot', text: GREETING }])
+    setSuggestions(QUICK_SUGGESTIONS)
+    setInput('')
+  }
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -427,26 +638,52 @@ export default function HelpDesk() {
 
     const asksAboutTech =
       /\b(does|is|can|could|know|knows|use|uses|used|work|works|worked|working|familiar|experienced|good|skill|learned|learn|have|has|with|in)\b/.test(q)
-    const tech = findTechMatch(q)
-    if (tech && asksAboutTech) {
-      return `Yes — ${tech.label} is part of Rittik's toolkit (${tech.category}). ${tech.blurb}`
+    const negated = /\b(not|no|never|dont|don't|doesnt|doesn't|isnt|isn't|aint)\b/.test(q)
+    const techs = findTechMatches(q)
+
+    if (techs.length >= 2) {
+      const comparing = /\b(vs|versus|compare|comparison|difference between|or)\b/.test(q)
+      return comparing ? buildComparison(techs) : buildCompound(techs)
+    }
+
+    if (techs.length === 1 && asksAboutTech) {
+      const t = techs[0]
+      const notInSkills = `${t.label} isn't part of Rittik's listed skill set. His toolkit focuses on AI/LLM engineering (Python, RAG, LangChain, DeepSeek), full-stack web (Django, React, Node.js), and cloud/DevOps (AWS, Docker, CI/CD).`
+      if (!t.known) {
+        return negated ? `Right — ${notInSkills}` : notInSkills
+      }
+      return negated
+        ? `Actually, yes — ${t.label} IS part of Rittik's toolkit (${t.category}). ${t.blurb}`
+        : `Yes — ${t.label} is part of Rittik's toolkit (${t.category}). ${t.blurb}`
     }
 
     const missingTech = asksAboutTech ? findMissingTech(q) : null
     if (missingTech) {
-      return `${missingTech} isn't part of Rittik's listed skill set. His toolkit focuses on AI/LLM engineering (Python, RAG, LangChain, DeepSeek), full-stack web (Django, React, Node.js), and cloud/DevOps (AWS, Docker, CI/CD).`
+      const notInSkills = `${missingTech} isn't part of Rittik's listed skill set. His toolkit focuses on AI/LLM engineering (Python, RAG, LangChain, DeepSeek), full-stack web (Django, React, Node.js), and cloud/DevOps (AWS, Docker, CI/CD).`
+      return negated ? `Right — ${notInSkills}` : notInSkills
     }
 
-    const followUp =
-      /\b(more|further|details|explain|elaborate|expand|continue|and)\b/.test(q) && lastTopicRef.current
-    if (followUp) {
-      return lastTopicRef.current.entry.extended || lastTopicRef.current.entry.answer
+    const unknownTech = asksAboutTech ? findUnknownTech(q) : null
+    if (unknownTech) {
+      return `${unknownTech} isn't part of Rittik's listed skill set — his toolkit centers on AI/LLM engineering, full-stack web (Django, React, Node.js) and cloud/DevOps (AWS, Docker, CI/CD).`
     }
 
     const matches = findBestAnswers(question)
     if (matches.length > 0) {
-      lastTopicRef.current = { entry: matches[0].entry, question: q }
+      lastTopicRef.current = [
+        ...(lastTopicRef.current || []),
+        { entry: matches[0].entry, question: q },
+      ].slice(-3)
       return composeAnswers(matches.map((m) => m.entry.answer))
+    }
+
+    const followUp =
+      /\b(more|further|details|explain|elaborate|expand|continue|keep going|tell me more)\b/.test(q) &&
+      lastTopicRef.current &&
+      lastTopicRef.current.length > 0
+    if (followUp) {
+      const last = lastTopicRef.current[lastTopicRef.current.length - 1]
+      return last.entry.extended || last.entry.answer
     }
 
     return "I'm sorry, I couldn't find an answer to that in my knowledge. Try asking about his skills, experience, projects, education, certifications, or how to contact him — or reach out directly at rittikpati434@gmail.com."
@@ -459,7 +696,9 @@ export default function HelpDesk() {
     setInput('')
     setTyping(true)
     setTimeout(() => {
-      setMessages((prev) => [...prev, { role: 'bot', text: respondTo(question) }])
+      const answer = respondTo(question)
+      setMessages((prev) => [...prev, { role: 'bot', text: answer }])
+      setSuggestions(getFollowUps(question))
       setTyping(false)
     }, 700)
   }
@@ -505,6 +744,14 @@ export default function HelpDesk() {
             </p>
           </div>
           <button
+            aria-label="Clear chat"
+            className="text-on-surface-variant hover:text-primary transition-colors p-1"
+            onClick={clearChat}
+            title="Clear chat"
+          >
+            <span className="material-symbols-outlined">delete_sweep</span>
+          </button>
+          <button
             aria-label="Close chat"
             className="text-on-surface-variant hover:text-primary transition-colors p-1"
             onClick={() => setOpen(false)}
@@ -546,9 +793,9 @@ export default function HelpDesk() {
               </div>
             </div>
           )}
-          {messages.length === 1 && (
+          {!typing && (
             <div className="flex flex-wrap gap-2 mt-1">
-              {QUICK_SUGGESTIONS.map((s) => (
+              {suggestions.map((s) => (
                 <button
                   key={s}
                   className="tech-tag rounded-full px-3 py-1.5 font-code-sm text-code-sm inline-flex items-center gap-1.5 hover:bg-primary/15 hover:border-primary/40 transition-all duration-300"
