@@ -1,0 +1,59 @@
+export default function Experience() {
+  return (
+    <section
+      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view"
+      id="experience"
+    >
+      <div className="mb-stack-lg reveal in-view">
+        <h2 className="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">
+          Experience & Education
+        </h2>
+      </div>
+      <div className="max-w-3xl relative border-l border-white/10 ml-3 md:ml-0 pl-6 md:pl-10 space-y-12">
+        <div className="relative reveal in-view">
+          <span className="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10" />
+          <div className="glass-card rounded-xl p-6">
+            <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+              <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
+                AI Business Solutions Architect Intern
+              </h3>
+              <span className="font-code-sm text-code-sm text-primary bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
+                YuvaIntern • 08/2026 – Present
+              </span>
+            </div>
+            <p className="font-body-md text-body-md text-on-surface-variant mb-4">
+              Integrated DeepSeek API and RAG workflows into enterprise solutions, significantly
+              improving internal operations and reducing query latency by 35%.
+            </p>
+            <div className="flex gap-2">
+              <span className="tech-tag rounded px-2 py-1 font-code-sm text-[12px]">DeepSeek API</span>
+              <span className="tech-tag rounded px-2 py-1 font-code-sm text-[12px]">RAG</span>
+              <span className="tech-tag rounded px-2 py-1 font-code-sm text-[12px]">Agentic AI</span>
+            </div>
+          </div>
+        </div>
+        <div className="relative pt-6 reveal in-view">
+          <span className="absolute -left-[33px] md:-left-[49px] top-10 w-4 h-4 bg-surface border-[3px] border-white/20 rounded-full z-10" />
+          <div className="flex items-center gap-2 mb-4">
+            <span className="material-symbols-outlined text-on-surface-variant">school</span>
+            <h4 className="font-label-caps text-label-caps text-on-surface-variant">EDUCATION</h4>
+          </div>
+          <div className="glass-card rounded-xl p-6">
+            <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+              <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
+                B.Tech CSE - AI & ML
+              </h3>
+              <span className="font-code-sm text-code-sm text-on-surface-variant bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
+                Chandigarh University • 2023 - 2027
+              </span>
+            </div>
+            <p className="font-body-md text-body-md text-on-surface-variant">
+              CGPA: 8.2/10. Specialized in Generative AI, Neural Networks, and Scalable Data
+              Systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

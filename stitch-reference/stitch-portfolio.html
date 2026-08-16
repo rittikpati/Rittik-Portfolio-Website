@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style="scroll-behavior: smooth;"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rittik Pati - AI/ML Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-container": "#d3d0cf",
+                "surface-bright": "#2c3a4c",
+                "on-surface": "#d4e4fa",
+                "secondary-fixed-dim": "#b0c6ff",
+                "on-secondary-fixed-variant": "#00429b",
+                "on-error-container": "#ffdad6",
+                "surface-container-low": "#0d1c2d",
+                "inverse-on-surface": "#233143",
+                "surface-container-highest": "#273647",
+                "on-tertiary": "#313030",
+                "primary-fixed-dim": "#00daf3",
+                "on-primary-fixed": "#001f24",
+                "background": "#051424",
+                "outline-variant": "#3b494c",
+                "primary": "#c3f5ff",
+                "secondary": "#b0c6ff",
+                "on-tertiary-fixed-variant": "#474646",
+                "surface": "#051424",
+                "primary-fixed": "#9cf0ff",
+                "on-secondary": "#002d6e",
+                "on-tertiary-container": "#5a5959",
+                "surface-tint": "#00daf3",
+                "secondary-fixed": "#d9e2ff",
+                "inverse-surface": "#d4e4fa",
+                "tertiary-fixed": "#e5e2e1",
+                "on-secondary-container": "#f2f3ff",
+                "tertiary": "#f0ecec",
+                "primary-container": "#00e5ff",
+                "secondary-container": "#0068ed",
+                "surface-container-high": "#1c2b3c",
+                "on-error": "#690005",
+                "surface-container-lowest": "#010f1f",
+                "error-container": "#93000a",
+                "on-background": "#d4e4fa",
+                "on-primary": "#00363d",
+                "on-secondary-fixed": "#001945",
+                "error": "#ffb4ab",
+                "inverse-primary": "#006875",
+                "surface-container": "#122131",
+                "surface-variant": "#273647",
+                "surface-dim": "#051424",
+                "on-primary-fixed-variant": "#004f58",
+                "tertiary-fixed-dim": "#c9c6c5",
+                "outline": "#849396",
+                "on-primary-container": "#00626e",
+                "on-tertiary-fixed": "#1c1b1b",
+                "on-surface-variant": "#bac9cc"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "container-max": "1200px",
+                "section-gap": "120px",
+                "stack-md": "16px",
+                "gutter": "24px",
+                "stack-lg": "32px",
+                "stack-sm": "8px",
+                "unit": "8px"
+        },
+        "fontFamily": {
+                "label-caps": [
+                        "Inter"
+                ],
+                "display-lg-mobile": [
+                        "Geist"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "display-lg": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Geist"
+                ],
+                "code-sm": [
+                        "JetBrains Mono"
+                ]
+        },
+        "fontSize": {
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "code-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #000000;
+            color: #d4e4fa;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .glass-card {
+            background: rgba(5, 20, 36, 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(195, 245, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(195, 245, 255, 0.3); /* primary color */
+            background: rgba(5, 20, 36, 0.4);
+        }
+
+        .tech-tag {
+            border: 1px solid rgba(195, 245, 255, 0.2);
+            background: rgba(0, 218, 243, 0.05);
+            backdrop-filter: blur(4px);
+            color: #c3f5ff;
+        }
+        
+        /* Persistent Background Images Container */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -20;
+            background-color: #000000;
+        }
+        
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #bg-stage-1 { opacity: 0.5; z-index: 1; }
+        #bg-stage-2 { z-index: 2; }
+        #bg-stage-3 { z-index: 3; }
+        
+        /* Dim overlay to ensure text legibility */
+        .dim-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+            z-index: -15;
+            pointer-events: none;
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Flow Reveal Rest of Content */
+        #rest-of-content {
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .content-hidden {
+            opacity: 0;
+            transform: translateY(100px);
+            pointer-events: none;
+        }
+        .content-visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Persistent Background Images -->
+<div class="bg-container">
+<img alt="Stage 1 - SRK-style welcome" class="bg-image" data-stitch-orig-opacity="0.5" id="bg-stage-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI_7iGB0IUh_5SA_lUPx6xr8RcY2n6hCmvX6i0Pr3MBLnDoM88SXBTMu6fLufRF07NNVlk2WO7TyreWsLt9MWeJNLLqp6OyPfbAdjXSbxgujPt_vvjzyi0UKdfNK1urLt9ynkaSElxBP-TKV3cWCDxDgztfBLEEOomKxoCyRwfkERxQOl6kdWNANn1UymbPu6EIECBU2clhULmLV4EmykXI0yG72_oo44NC5Gs_3xLCoJlWUtaJ69C5vLAyx3QQ9AuO2M" style="opacity: 0.5;"/>
+<img alt="Stage 2 - Transitioning to sit" class="bg-image" data-stitch-orig-opacity="0" id="bg-stage-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBecZ-Ttd6GASG4EamaqHwKkLB6o2SSfWLI2p_fZi0uAP3BC4W4UvEr9WHWrux6DvaSznwp8UgYoramJqXnSOMvzxJiHICiNwoVnWXVAeCyP50wrln_-ZH19sb9qDGEGA1wfZvSuxQ8XamWIrl7IWLMjeFOX0U6OLIRCPbY1u0aYP1ebb-8rVBN3aPe8MhjMp3x5BKgVHkOVddU5Fi_AAVpTn6g_6JRUAR4GLGNeU1Jsg9R1f7kXzo-6-yYu8XBA9WRKjA" style="opacity: 0;"/>
+<img alt="Stage 3 - Stylish seated pose" class="bg-image" data-stitch-orig-opacity="0" id="bg-stage-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASAg4K83KlfK0tt9GmKFLM_sY6oneMbrChGklHGsLycjODfEoj2KV1kRuPfqcCWm5yNMVzUZzjwRn4lbsaVlyjuUbiccnWdyydgORCIWo7psSw_4jKbK3iPWZncArOcGl_q1HT1eLCtP7CkZlOuoUPCynDDavh5tK1LGlSMTs7cBijZQhBpOMJypsT-s_1f2wxJAV2_RU0PLOdWWHlQa0ATRTS7vC0Rinfduc7eYCiXxnxXfomhxBShaqpAmsWZ5fKf6g" style="opacity: 0;"/>
+</div>
+<div class="dim-overlay" style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));"></div>
+<!-- TopNavBar -->
+<nav class="bg-surface/60 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-white/5 reveal in-view">
+<div class="flex justify-between items-center h-20 max-w-container-max mx-auto px-gutter">
+<div class="font-headline-md text-headline-md font-bold text-primary tracking-tight hover:text-primary-container transition-all duration-300">
+                Rittik Pati
+            </div>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex items-center gap-8">
+<li class=""><a class="text-on-surface hover:text-primary transition-colors font-body-md text-body-md transition-all duration-300" href="#projects">Projects</a></li>
+<li class=""><a class="text-on-surface hover:text-primary transition-colors font-body-md text-body-md transition-all duration-300" href="#skills">Skills</a></li>
+<li class=""><a class="text-on-surface hover:text-primary transition-colors font-body-md text-body-md transition-all duration-300" href="#experience">Experience</a></li>
+<li class=""><a class="text-on-surface hover:text-primary transition-colors font-body-md text-body-md transition-all duration-300" href="#contact">Contact</a></li>
+</ul>
+<div class="flex items-center gap-4">
+<a class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-primary/90 hover:bg-primary backdrop-blur-md text-on-primary rounded font-body-md text-body-md transition-colors font-medium border border-primary/20" href="#">
+                    Resume
+                </a>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="reveal relative pt-32 pb-section-gap px-gutter max-w-container-max mx-auto min-h-screen flex flex-col justify-center in-view" id="hero">
+<div class="max-w-3xl relative z-10 text-left">
+<h1 class="text-5xl md:text-7xl font-display-lg font-bold text-primary mb-stack-md leading-tight drop-shadow-md">Welcome to Rittik Pati's Portfolio</h1>
+<h2 class="font-headline-md text-headline-md md:text-3xl text-on-surface mb-stack-lg leading-tight drop-shadow-md">Aspiring AI Engineer | LLM Engineer | Generative AI Developer</h2>
+<p class="font-body-lg text-body-lg text-on-surface mb-stack-lg max-w-2xl leading-relaxed drop-shadow-sm">
+                    AI Engineer specializing in Retrieval-Augmented Generation (RAG) and Agentic AI. Proven track record of developing scalable data-driven solutions, resulting in productivity gains such as reducing latency by 35% and improving response times by 30%.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex items-center justify-center px-6 py-3 bg-primary/90 hover:bg-primary backdrop-blur-md text-on-primary rounded font-body-md text-body-md transition-colors font-medium border border-primary/20" href="#projects">
+                        View Projects
+                    </a>
+<a class="inline-flex items-center justify-center px-6 py-3 bg-surface/40 backdrop-blur-md border border-primary/20 text-primary rounded font-body-md text-body-md hover:bg-surface-bright/50 transition-colors" href="#">
+                        Download Resume
+                    </a>
+</div>
+</div>
+</section>
+<div class="content-hidden" id="rest-of-content">
+<!-- Projects Section -->
+<section class="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view" id="projects">
+<div class="mb-stack-lg reveal in-view">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">Featured Work</h2>
+<p class="font-body-md text-body-md text-on-surface-variant drop-shadow-sm">Select technical implementations and research.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><article class="glass-card rounded-xl p-6 flex flex-col h-full relative group reveal in-view"><div class="relative z-10 flex-grow"><span class="font-label-caps text-label-caps text-surface-tint block mb-stack-sm tracking-widest">AI-POWERED CRM</span><h3 class="font-body-lg text-body-lg text-on-surface font-semibold mb-stack-md">RittikDesk AI</h3><p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">A comprehensive AI-powered CRM system featuring DeepSeek LLM integration for automated customer insights, built with Django, React, and Docker. Implemented advanced analytics to boost user engagement.</p></div><div class="relative z-10 mt-auto flex flex-wrap gap-2 pt-stack-md border-t border-white/5"><span class="tech-tag rounded px-2 py-1 font-code-sm text-code-sm">DeepSeek</span><span class="tech-tag rounded px-2 py-1 font-code-sm text-code-sm">Django</span><span class="tech-tag rounded px-2 py-1 font-code-sm text-code-sm">React</span><span class="tech-tag rounded px-2 py-1 font-code-sm text-code-sm">Docker</span></div></article></div>
+</section>
+<!-- Skills Section -->
+<section class="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view" id="skills">
+<div class="mb-stack-lg reveal in-view">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">Technical Arsenal</h2>
+<p class="font-body-md text-body-md text-on-surface-variant drop-shadow-sm">Core competencies and preferred tooling.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"><div class="glass-card rounded-xl p-6 reveal in-view"><div class="flex items-center gap-3 mb-stack-md border-b border-white/5 pb-stack-sm"><span class="material-symbols-outlined text-surface-tint">psychology</span><h3 class="font-body-lg text-body-lg font-semibold text-on-surface">AI &amp; Generative AI</h3></div><ul class="space-y-4"><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">DeepSeek &amp; NLP</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-full rounded-full"></div></div></li><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">LangChain</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-11/12 rounded-full"></div></div></li><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">RAG</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-4/5 rounded-full"></div></div></li></ul></div><div class="glass-card rounded-xl p-6 reveal in-view"><div class="flex items-center gap-3 mb-stack-md border-b border-white/5 pb-stack-sm"><span class="material-symbols-outlined text-surface-tint">api</span><h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Backend &amp; APIs</h3></div><ul class="space-y-4"><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">Django &amp; DRF</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-full rounded-full"></div></div></li><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">FastAPI</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-11/12 rounded-full"></div></div></li><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">REST Architecture</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-3/4 rounded-full"></div></div></li></ul></div><div class="glass-card rounded-xl p-6 reveal in-view"><div class="flex items-center gap-3 mb-stack-md border-b border-white/5 pb-stack-sm"><span class="material-symbols-outlined text-surface-tint">cloud</span><h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Cloud &amp; DevOps</h3></div><ul class="space-y-4"><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">AWS</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-11/12 rounded-full"></div></div></li><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">Docker</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-full rounded-full"></div></div></li><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">CI/CD</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-4/5 rounded-full"></div></div></li></ul></div><div class="glass-card rounded-xl p-6 reveal in-view"><div class="flex items-center gap-3 mb-stack-md border-b border-white/5 pb-stack-sm"><span class="material-symbols-outlined text-surface-tint">web</span><h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Frontend &amp; Viz</h3></div><ul class="space-y-4"><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">React</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-4/5 rounded-full"></div></div></li><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">Tailwind CSS</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-11/12 rounded-full"></div></div></li><li class="flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface">Streamlit</span><div class="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden"><div class="h-full bg-primary w-3/4 rounded-full"></div></div></li></ul></div></div>
+</section>
+<!-- Experience Section -->
+<section class="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view" id="experience">
+<div class="mb-stack-lg reveal in-view">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">Experience &amp; Education</h2>
+</div>
+<div class="max-w-3xl relative border-l border-white/10 ml-3 md:ml-0 pl-6 md:pl-10 space-y-12"><div class="relative reveal in-view"><span class="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10"></span><div class="glass-card rounded-xl p-6"><div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"><h3 class="font-body-lg text-body-lg text-on-surface font-semibold">AI Business Solutions Architect Intern</h3><span class="font-code-sm text-code-sm text-primary bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">YuvaIntern • 08/2026 – Present</span></div><p class="font-body-md text-body-md text-on-surface-variant mb-4">Integrated DeepSeek API and RAG workflows into enterprise solutions, significantly improving internal operations and reducing query latency by 35%.</p><div class="flex gap-2"><span class="tech-tag rounded px-2 py-1 font-code-sm text-[12px]">DeepSeek API</span><span class="tech-tag rounded px-2 py-1 font-code-sm text-[12px]">RAG</span><span class="tech-tag rounded px-2 py-1 font-code-sm text-[12px]">Agentic AI</span></div></div></div><div class="relative pt-6 reveal in-view"><span class="absolute -left-[33px] md:-left-[49px] top-10 w-4 h-4 bg-surface border-[3px] border-white/20 rounded-full z-10"></span><div class="flex items-center gap-2 mb-4"><span class="material-symbols-outlined text-on-surface-variant">school</span><h4 class="font-label-caps text-label-caps text-on-surface-variant">EDUCATION</h4></div><div class="glass-card rounded-xl p-6"><div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4"><h3 class="font-body-lg text-body-lg text-on-surface font-semibold">B.Tech CSE - AI &amp; ML</h3><span class="font-code-sm text-code-sm text-on-surface-variant bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">Chandigarh University • 2023 - 2027</span></div><p class="font-body-md text-body-md text-on-surface-variant">CGPA: 8.2/10. Specialized in Generative AI, Neural Networks, and Scalable Data Systems.</p></div></div></div>
+</section>
+<!-- Research & Publications Section -->
+<section class="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view" id="research">
+<div class="mb-stack-lg reveal in-view">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">Research &amp; Publications</h2>
+<p class="font-body-md text-body-md text-on-surface-variant drop-shadow-sm">Academic contributions and active research areas.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Publication 1 -->
+<article class="glass-card rounded-xl p-6 flex flex-col h-full relative group reveal in-view">
+<div class="relative z-10 flex-grow">
+<span class="font-label-caps text-label-caps text-surface-tint block mb-stack-sm tracking-widest">ICLR 2023 WORKSHOP</span>
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold mb-stack-md">Optimizing Transformers for Low-Resource Neural Machine Translation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
+                            Investigated novel attention mechanisms to improve translation accuracy for languages with limited parallel corpora. Proposed architecture achieved state-of-the-art results on several benchmark datasets.
+                        </p>
+</div>
+<div class="relative z-10 mt-auto flex flex-wrap gap-2 pt-stack-md border-t border-white/5">
+<a class="inline-flex items-center gap-2 text-primary hover:text-primary-fixed transition-colors font-code-sm text-code-sm" href="#">
+<span class="material-symbols-outlined text-[16px]">menu_book</span> Read Paper
+                        </a>
+</div>
+</article>
+<!-- Publication 2 -->
+<article class="glass-card rounded-xl p-6 flex flex-col h-full relative group reveal in-view">
+<div class="relative z-10 flex-grow">
+<span class="font-label-caps text-label-caps text-surface-tint block mb-stack-sm tracking-widest">ARXIV PREPRINT</span>
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold mb-stack-md">Efficient Federated Learning via Model Pruning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
+                            Developed a communication-efficient federated learning framework integrating iterative magnitude pruning, reducing bandwidth requirements by 60% without significant loss in global model accuracy.
+                        </p>
+</div>
+<div class="relative z-10 mt-auto flex flex-wrap gap-2 pt-stack-md border-t border-white/5">
+<a class="inline-flex items-center gap-2 text-primary hover:text-primary-fixed transition-colors font-code-sm text-code-sm" href="#">
+<span class="material-symbols-outlined text-[16px]">menu_book</span> Read Paper
+                        </a>
+</div>
+</article>
+</div>
+</section><section class="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view" id="certifications"><div class="mb-stack-lg reveal in-view"><h2 class="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">Certifications</h2><p class="font-body-md text-body-md text-on-surface-variant drop-shadow-sm">Professional credentials and specialized training.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="glass-card rounded-xl p-6 flex flex-col gap-3"><span class="material-symbols-outlined text-surface-tint">verified</span><h3 class="font-body-md text-body-md font-semibold text-on-surface">Oracle Agentic AI Foundations Associate</h3><p class="text-code-sm text-on-surface-variant">2026</p></div><div class="glass-card rounded-xl p-6 flex flex-col gap-3"><span class="material-symbols-outlined text-surface-tint">verified</span><h3 class="font-body-md text-body-md font-semibold text-on-surface">Building RAG Applications Using MongoDB</h3><p class="text-code-sm text-on-surface-variant">July 2026</p></div><div class="glass-card rounded-xl p-6 flex flex-col gap-3"><span class="material-symbols-outlined text-surface-tint">verified</span><h3 class="font-body-md text-body-md font-semibold text-on-surface">Microsoft: AI Solutions &amp; Azure Cloud Fundamentals</h3><p class="text-code-sm text-on-surface-variant">2025</p></div></div></section>
+<!-- Technical Leadership Section -->
+<section class="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view" id="leadership">
+<div class="mb-stack-lg reveal in-view">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">Technical Leadership</h2>
+<p class="font-body-md text-body-md text-on-surface-variant drop-shadow-sm">Mentorship, community building, and open-source.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="glass-card rounded-xl p-6 flex flex-col reveal in-view">
+<div class="flex items-center gap-3 mb-stack-md">
+<span class="material-symbols-outlined text-surface-tint text-3xl">groups</span>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Engineering Mentorship</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Lead mentor for the university's AI student group, guiding over 50 students through hands-on deep learning projects. Organized weekly code reviews and architecture deep-dives.
+                    </p>
+</div>
+<div class="glass-card rounded-xl p-6 flex flex-col reveal in-view">
+<div class="flex items-center gap-3 mb-stack-md">
+<span class="material-symbols-outlined text-surface-tint text-3xl">public</span>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface">Open Source Contributions</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Active contributor to several prominent open-source machine learning libraries. Focused on optimizing data loading pipelines and improving documentation for edge-case implementations.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 text-center in-view" id="contact">
+<div class="max-w-2xl mx-auto glass-card rounded-2xl p-12 border border-white/10 relative overflow-hidden reveal in-view">
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Get in Touch</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
+                    Currently seeking full-time opportunities in Machine Learning and Data Engineering. My inbox is always open.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary/90 hover:bg-primary backdrop-blur-md text-on-primary rounded font-body-md text-body-md transition-colors font-medium border border-primary/20" href="mailto:rittikpati434@gmail.com"><span class="material-symbols-outlined">mail</span> rittikpati434@gmail.com</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-surface/40 backdrop-blur-md border border-primary/20 text-primary rounded font-body-md text-body-md hover:bg-surface-bright/50 transition-colors" href="https://www.linkedin.com/in/rittik-pati-229389290/" rel="noopener noreferrer" target="_blank">LinkedIn Profile</a>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest/80 backdrop-blur-md w-full py-stack-lg border-t border-white/5 reveal in-view">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-gutter gap-stack-md">
+<div class="font-label-caps text-label-caps text-on-surface-variant">
+                © 2024 Rittik Pati. Engineered for Performance.
+            </div>
+<ul class="flex items-center gap-6">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="https://github.com/rittikpati" rel="noopener noreferrer" target="_blank">GitHub</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="https://www.linkedin.com/in/rittik-pati-229389290/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="mailto:rittikpati434@gmail.com">Email</a></li>
+</ul>
+</div>
+</footer>
+<!-- End of rest-of-content -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Scroll Reveal Animation
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Cinematic Background Sequence
+        const bg1 = document.getElementById('bg-stage-1');
+        const bg2 = document.getElementById('bg-stage-2');
+        const bg3 = document.getElementById('bg-stage-3');
+        const maxOpacity = 0.5;
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const maxScroll = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight;
+            
+            if (maxScroll <= 0) return;
+            
+            const scrollPercent = Math.min(Math.max(scrollY / maxScroll, 0), 1);
+            
+            if (scrollPercent < 0.33) {
+                bg1.style.opacity = maxOpacity;
+                bg2.style.opacity = 0;
+                bg3.style.opacity = 0;
+            } else if (scrollPercent < 0.66) {
+                // Crossfade 1 -> 2
+                const localP = (scrollPercent - 0.33) / 0.33;
+                bg1.style.opacity = maxOpacity * (1 - localP);
+                bg2.style.opacity = maxOpacity * localP;
+                bg3.style.opacity = 0;
+            } else {
+                // Crossfade 2 -> 3
+                const localP = (scrollPercent - 0.66) / 0.34;
+                bg1.style.opacity = 0;
+                bg2.style.opacity = maxOpacity * (1 - localP);
+                bg3.style.opacity = maxOpacity * localP;
+            }
+        });
+        
+        // Initial trigger for scroll to set correct background on load
+        window.dispatchEvent(new Event('scroll'));
+
+        // Flow Reveal Rest of Content
+        const restContent = document.getElementById('rest-of-content');
+        let contentRevealed = false;
+
+        function revealRestOfContent() {
+            if (!contentRevealed) {
+                contentRevealed = true;
+                restContent.classList.remove('content-hidden');
+                restContent.classList.add('content-visible');
+            }
+        }
+
+        window.addEventListener('wheel', (e) => {
+            if (e.deltaY > 0) {
+                revealRestOfContent();
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                revealRestOfContent();
+            }
+        });
+        
+        let touchstartY = 0;
+        window.addEventListener('touchstart', e => touchstartY = e.touches[0].clientY);
+        window.addEventListener('touchmove', e => {
+            if (touchstartY - e.touches[0].clientY > 20) {
+                revealRestOfContent();
+            }
+        });
+    });
+</script>
+</body></html>
