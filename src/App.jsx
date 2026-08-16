@@ -10,6 +10,7 @@ import Certifications from './components/Certifications.jsx'
 import Leadership from './components/Leadership.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
+import HelpDesk from './components/HelpDesk.jsx'
 
 const MAX_BG_OPACITY = 0.7
 
@@ -124,6 +125,7 @@ export default function App() {
         </div>
       </main>
       <Footer />
+      <HelpDesk />
     </>
   )
 }

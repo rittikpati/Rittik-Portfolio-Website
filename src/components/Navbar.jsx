@@ -27,7 +27,9 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             className="hidden md:inline-flex items-center justify-center px-4 py-2 bg-primary/90 hover:bg-primary backdrop-blur-md text-on-primary rounded font-body-md text-body-md transition-colors font-medium border border-primary/20"
-            href="#"
+            href="/Rittik_Pati_AI_Engineer_Resume.pdf"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Resume
           </a>

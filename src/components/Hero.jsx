@@ -25,7 +25,9 @@ export default function Hero() {
           </a>
           <a
             className="inline-flex items-center justify-center px-6 py-3 bg-surface/40 backdrop-blur-md border border-primary/20 text-primary rounded font-body-md text-body-md hover:bg-surface-bright/50 transition-colors"
-            href="#"
+            href="/Rittik_Pati_AI_Engineer_Resume.pdf"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Download Resume
           </a>
