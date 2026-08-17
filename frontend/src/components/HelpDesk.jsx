@@ -614,6 +614,10 @@ function getFollowUps(question) {
     push('How to contact him?')
     push('What are his certifications?')
     push('What is his education?')
+  } else if (/\b(achievement|award|milestone|accomplishment|proctored)\b/.test(q)) {
+    push('What are his achievements?')
+    push('What are his certifications?')
+    push('Who is Rittik?')
   } else if (/\b(certif|badge|oracle|mongodb|microsoft|azure|credential)\b/.test(q)) {
     push('What is his education?')
     push('How to contact him?')
@@ -711,7 +715,7 @@ function findDirectAction(question) {
   }
 
   if (/\b(summary|overview|elevator pitch|quick intro|short intro)\b/.test(q)) {
-    return "Here's Rittik in short: an aspiring AI Engineer specializing in RAG and Agentic AI — currently an AI Business Solutions Architect Intern at YuvaIntern, pursuing B.Tech CSE (AI & ML) at Chandigarh University. He builds LLM applications end-to-end (Django, React, Docker, DeepSeek API), holds 15 certifications including Oracle, Microsoft, MongoDB, AWS, LangChain and Anthropic, and has completed 10 job simulations with global companies. Jump to his projects: #projects"
+    return "Here's Rittik in short: an aspiring AI Engineer specializing in RAG and Agentic AI — currently an AI Business Solutions Architect Intern at YuvaIntern, pursuing B.Tech CSE (AI & ML) at Chandigarh University. He builds LLM applications end-to-end (Django, React, Docker, DeepSeek API), holds 15 certifications including Oracle, Microsoft, MongoDB, AWS, LangChain and Anthropic, has cleared 3 Oracle exams in online proctored mode, and completed 10 job simulations with global companies. Jump to his projects: #projects"
   }
 
   if (/\b(how many|certification count|total certifications|total certificates)\b/.test(q)) {
