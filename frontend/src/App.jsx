@@ -5,6 +5,7 @@ import Hero from './components/Hero.jsx'
 import Projects from './components/Projects.jsx'
 import Skills from './components/Skills.jsx'
 import Experience from './components/Experience.jsx'
+import Achievements from './components/Achievements.jsx'
 import JobSimulations from './components/JobSimulations.jsx'
 import Certifications from './components/Certifications.jsx'
 import Leadership from './components/Leadership.jsx'
@@ -118,6 +119,7 @@ export default function App() {
           <Projects />
           <Skills />
           <Experience />
+          <Achievements />
           <JobSimulations />
           <Certifications />
           <Leadership />

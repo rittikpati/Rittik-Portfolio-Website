@@ -210,6 +210,13 @@ const KNOWLEDGE_BASE = [
       "You can see the full categorized breakdown in the Technical Arsenal section of this website — each card groups his skills by AI/GenAI, Backend & APIs, Cloud/DevOps/Databases, and Frontend.",
   },
   {
+    keywords: ['achievement', 'achievements', 'awards', 'milestones', 'accomplishments', 'recognition', 'proctored', 'oracle exam', 'oracle proctored'],
+    answer:
+      "Rittik's top achievements: (1) Cleared 3 Oracle certification exams in online proctored mode — OCI Architect Associate, AI Foundations Associate and Agentic AI Foundations Associate (2026), each verified with an official Oracle badge and certificate. (2) 15+ industry certifications across Oracle, Microsoft, MongoDB, AWS, LangChain Academy, Anthropic, Hugging Face, Salesforce and more. (3) 10 global job simulations with Mastercard, Goldman Sachs, Walmart, TCS, BCG X, Deloitte and others. (4) Academic excellence — B.Tech CSE (AI & ML) at Chandigarh University with a CGPA of 8.2/10. See the full section: #achievements",
+    extended:
+      "Every Oracle badge is verifiable online — ask me to 'show his achievements' for the direct links.",
+  },
+  {
     keywords: ['languages', 'programming languages', 'core languages', 'language'],
     answer:
       "His core programming languages are Python, SQL, JavaScript (ES6+), HTML5 and CSS3. Python is his primary language for AI/ML work, and he uses JavaScript across full-stack projects.",
@@ -715,6 +722,7 @@ function findDirectAction(question) {
     { keys: ['projects', 'featured work', 'what has he built'], anchor: '#projects', label: 'Projects' },
     { keys: ['skills', 'technical arsenal', 'technical stack'], anchor: '#skills', label: 'Skills' },
     { keys: ['experience', 'internships', 'internship', 'work history', 'career'], anchor: '#experience', label: 'Experience' },
+    { keys: ['achievements', 'awards', 'accomplishments', 'milestones'], anchor: '#achievements', label: 'Achievements' },
     { keys: ['job simulations', 'job simulation', 'simulations'], anchor: '#job-simulations', label: 'Job Simulations' },
     { keys: ['certifications', 'certificates', 'badges'], anchor: '#certifications', label: 'Certifications' },
     { keys: ['leadership', 'mentorship'], anchor: '#leadership', label: 'Leadership' },
