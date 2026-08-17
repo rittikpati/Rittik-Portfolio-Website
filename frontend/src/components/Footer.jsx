@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="bg-surface-container-lowest/80 backdrop-blur-md w-full py-stack-lg border-t border-white/5 reveal in-view">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-gutter gap-stack-md">
         <div className="font-label-caps text-label-caps text-on-surface-variant">
-          © 2024 Rittik Pati. Engineered for Performance.
+          © {new Date().getFullYear()} Rittik Pati. Engineered for Performance.
         </div>
         <ul className="flex items-center justify-center flex-wrap gap-4 md:gap-6">
           {FOOTER_LINKS.map((link) => (
