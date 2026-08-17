@@ -89,6 +89,16 @@ docker compose up --build
 
 Builds the frontend, packages everything into a slim image, and serves it on port `8000`.
 
+### Deploying to Vercel (Frontend only)
+
+The site is fully static — the Express backend is optional and not needed on Vercel.
+
+1. Push the repository to GitHub.
+2. Import the repository in Vercel and set **Root Directory** to `frontend`.
+3. Vercel auto-detects **Vite** (build: `npm run build`, output: `dist`).
+4. Deploy — every future `git push` redeploys automatically.
+5. After going live, update the `og:image` value in `frontend/index.html` to your absolute Vercel URL for accurate social-share previews.
+
 ## API
 
 | Method | Route         | Description                |
@@ -103,7 +113,8 @@ Builds the frontend, packages everything into a slim image, and serves it on por
 - Glassmorphism card design system
 - Responsive layout (mobile, tablet, desktop)
 - Sections: Projects, Skills, Experience, Job Simulations, Certifications, Leadership, Contact
-- AI Help Desk — a rule-based portfolio assistant with direct link actions (resume, certificates, badges)
+- AI Help Desk — a rule-based portfolio assistant with direct link actions (resume, certificates, badges), section shortcuts, time-aware greetings and fuzzy matching
+- SEO meta tags, Open Graph/Twitter card previews, custom favicon
 
 ## License
 

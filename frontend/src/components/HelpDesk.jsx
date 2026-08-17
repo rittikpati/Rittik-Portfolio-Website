@@ -459,8 +459,11 @@ const QUICK_SUGGESTIONS = [
   'How to contact him?',
 ]
 
-const GREETING =
-  "Hi, I'm Rittik's AI Help Desk assistant! Ask me anything about Rittik — skills, experience, projects, education, certifications, contact details, even tech concepts like RAG. What would you like to know?"
+function buildGreeting() {
+  const hour = new Date().getHours()
+  const timeOfDay = hour < 12 ? 'morning' : hour < 17 ? 'afternoon' : 'evening'
+  return `Good ${timeOfDay}! I'm Rittik's AI Help Desk assistant. Ask me anything about Rittik — skills, experience, projects, education, certifications, contact details, even tech concepts like RAG. What would you like to know?`
+}
 
 function normalize(text) {
   return text
@@ -471,6 +474,17 @@ function normalize(text) {
     .replace(/\bpls\b/g, 'please')
     .replace(/\bthx\b/g, 'thanks')
     .replace(/\bty\b/g, 'thank you')
+    .replace(/\bthnx\b/g, 'thanks')
+    .replace(/\btnx\b/g, 'thanks')
+    .replace(/\bgimme\b/g, 'give me')
+    .replace(/\bwanna\b/g, 'want to')
+    .replace(/\bgonna\b/g, 'going to')
+    .replace(/\bwats\b/g, 'whats')
+    .replace(/\bhv\b/g, 'have')
+    .replace(/\bcoz\b/g, 'because')
+    .replace(/\bbcz\b/g, 'because')
+    .replace(/\bav\b/g, 'have')
+    .replace(/\bld\b/g, 'would')
 }
 
 function tokenize(text) {
@@ -689,6 +703,32 @@ function findDirectAction(question) {
     return "Here's Rittik's GitHub: https://github.com/rittikpati\n\nYou'll find his project source code there, including RittikDesk AI."
   }
 
+  if (/\b(summary|overview|elevator pitch|quick intro|short intro)\b/.test(q)) {
+    return "Here's Rittik in short: an aspiring AI Engineer specializing in RAG and Agentic AI — currently an AI Business Solutions Architect Intern at YuvaIntern, pursuing B.Tech CSE (AI & ML) at Chandigarh University. He builds LLM applications end-to-end (Django, React, Docker, DeepSeek API), holds 15 certifications including Oracle, Microsoft, MongoDB, AWS, LangChain and Anthropic, and has completed 10 job simulations with global companies. Jump to his projects: #projects"
+  }
+
+  if (/\b(how many|certification count|total certifications|total certificates)\b/.test(q)) {
+    return `Rittik holds ${CERT_LINKS.length} certifications/credentials — Oracle (3), MongoDB, Microsoft, LinkedIn (2), Simplilearn, Infosys, AWS, LangChain Academy, Hugging Face, Anthropic, Activeloop & Intel, and Salesforce. See every one with its certificate and badge links: #certifications`
+  }
+
+  const sectionMap = [
+    { keys: ['projects', 'featured work', 'what has he built'], anchor: '#projects', label: 'Projects' },
+    { keys: ['skills', 'technical arsenal', 'technical stack'], anchor: '#skills', label: 'Skills' },
+    { keys: ['experience', 'internships', 'internship', 'work history', 'career'], anchor: '#experience', label: 'Experience' },
+    { keys: ['job simulations', 'job simulation', 'simulations'], anchor: '#job-simulations', label: 'Job Simulations' },
+    { keys: ['certifications', 'certificates', 'badges'], anchor: '#certifications', label: 'Certifications' },
+    { keys: ['leadership', 'mentorship'], anchor: '#leadership', label: 'Leadership' },
+    { keys: ['contact', 'reach', 'social'], anchor: '#contact', label: 'Contact' },
+  ]
+  for (const section of sectionMap) {
+    if (
+      /\b(show|jump|go to|take me to|scroll to|open|navigate)\b/.test(q) &&
+      section.keys.some((k) => q.includes(k))
+    ) {
+      return `Sure — here's a shortcut to the ${section.label} section: ${section.anchor}\n\nYou can also scroll there naturally — it's part of the single-page layout.`
+    }
+  }
+
   if (!asking) return null
 
   const tokens = tokenize(question).map(stem)
@@ -722,17 +762,17 @@ function findDirectAction(question) {
 function renderAnswer(text) {
   const paragraphs = text.split('\n\n')
   return paragraphs.map((para, i) => {
-    const parts = para.split(/(https?:\/\/[^\s]+|\/[A-Za-z0-9_\-./]+\.pdf)/g)
+    const parts = para.split(/(https?:\/\/[^\s]+|\/[A-Za-z0-9_\-./]+\.pdf|#[a-z][a-z0-9-]*)/g)
     return (
       <p key={i} className={paragraphs.length > 1 ? 'mb-2' : ''}>
         {parts.map((part, j) =>
-          /^https?:\/\//.test(part) || /^\/[A-Za-z0-9_\-./]+\.pdf$/.test(part) ? (
+          /^https?:\/\//.test(part) || /^\/[A-Za-z0-9_\-./]+\.pdf$/.test(part) || /^#[a-z][a-z0-9-]*$/.test(part) ? (
             <a
               key={j}
               className="text-primary underline hover:text-primary-fixed transition-colors"
               href={part}
               rel="noopener noreferrer"
-              target="_blank"
+              target={part.startsWith('#') ? undefined : '_blank'}
             >
               {part}
             </a>
@@ -747,7 +787,7 @@ function renderAnswer(text) {
 
 export default function HelpDesk() {
   const [open, setOpen] = useState(false)
-  const [messages, setMessages] = useState([{ role: 'bot', text: GREETING }])
+  const [messages, setMessages] = useState([{ role: 'bot', text: buildGreeting() }])
   const [input, setInput] = useState('')
   const [typing, setTyping] = useState(false)
   const [suggestions, setSuggestions] = useState(QUICK_SUGGESTIONS)
@@ -757,7 +797,7 @@ export default function HelpDesk() {
 
   function clearChat() {
     lastTopicRef.current = []
-    setMessages([{ role: 'bot', text: GREETING }])
+    setMessages([{ role: 'bot', text: buildGreeting() }])
     setSuggestions(QUICK_SUGGESTIONS)
     setInput('')
   }
