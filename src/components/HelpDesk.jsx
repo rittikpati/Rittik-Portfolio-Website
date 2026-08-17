@@ -352,6 +352,105 @@ const KNOWLEDGE_BASE = [
   },
 ]
 
+const CERT_LINKS = [
+  {
+    keys: ['oracle', 'oci', 'architect'],
+    title: 'Oracle Cloud Infrastructure Certified Architect Associate',
+    pdf: '/Oracle_Certificate.pdf',
+    badge:
+      'https://catalog-education.oracle.com/ords/certview/sharebadge?id=7D89F607AB00AD005C6F0E8E55D7CFAC3EBCC7E4C50B70ACC67A255DBCFF7AA9',
+  },
+  {
+    keys: ['oracle', 'ai foundations', 'foundations associate'],
+    title: 'Oracle Cloud Infrastructure Certified AI Foundations Associate',
+    pdf: '/Oracle_AI_Foundations_Certificate.pdf',
+    badge:
+      'https://catalog-education.oracle.com/ords/certview/sharebadge?id=D30699EA0ABE429C25CEFB265AC6EACAD0B3B2D00171336D20372883B9D8EC20',
+  },
+  {
+    keys: ['agentic ai', 'oracle agentic'],
+    title: 'Oracle Agentic AI Certified Foundations Associate',
+    pdf: '/Agentic_AI_Certificate.pdf',
+    badge:
+      'https://catalog-education.oracle.com/ords/certview/sharebadge?id=CAF10C473B4098038F6A069C15F3E1C868BF47B2C2906C6EF5FCCF7F2D576156',
+  },
+  {
+    keys: ['mongodb', 'rag', 'mongo'],
+    title: 'Building RAG Applications Using MongoDB',
+    pdf: '/MongoDB_RAG_Certificate.pdf',
+    badge: 'https://www.credly.com/users/rittik-pati.59d80275/edit/badges/credly',
+  },
+  {
+    keys: ['career essentials', 'generative ai by microsoft'],
+    title: 'Career Essentials in Generative AI by Microsoft & LinkedIn',
+    pdf: '/Career_Essentials_Generative_AI.pdf',
+  },
+  {
+    keys: ['microsoft', 'azure', 'ai solutions'],
+    title: 'Microsoft Certified: AI Solutions & Azure Cloud Fundamentals',
+    pdf: '/Microsoft_AI_Certificate.pdf',
+    badge: 'https://learn.microsoft.com/en-us/users/rittikpati-3950/',
+  },
+  {
+    keys: ['linkedin learning', 'ai literacy'],
+    title: 'LinkedIn Learning: Generative AI & AI Literacy',
+    pdf: '/LinkedIn_Learning_Certificates.pdf',
+  },
+  {
+    keys: ['simplilearn', 'machine learning using python', 'ml using python'],
+    title: 'Machine Learning Using Python (Simplilearn SkillUp)',
+    pdf: '/Machine_Learning_Using_Python_Certificate.pdf',
+  },
+  {
+    keys: ['infosys', 'database and sql'],
+    title: 'Database and SQL — Certified by Infosys',
+    pdf: '/Infosys_Database_SQL_Certificate.pdf',
+  },
+  {
+    keys: ['aws', 'amazon web services'],
+    title: 'AWS Cloud, Containers & ML — AWS Training & Certification',
+    pdf: '/AWS_Training_Certificates.pdf',
+  },
+  {
+    keys: ['langchain academy', 'reliable agents'],
+    title: 'Building Reliable Agents — LangChain Academy',
+    pdf: '/LangChain_Academy_Certificates.pdf',
+    badge: 'https://academy.langchain.com/certificates/rxrnvjqyjm',
+  },
+  {
+    keys: ['hugging face', 'huggingface'],
+    title: 'Hugging Face: LLM & AI Agents Course',
+    pdf: '/HuggingFace_LLM_Agents_Certificate.pdf',
+  },
+  {
+    keys: ['anthropic', 'mcp', 'model context protocol'],
+    title: 'Model Context Protocol (MCP): Advanced Topics — Certified by Anthropic',
+    pdf: '/Anthropic_MCP_Advanced_Certificate.pdf',
+    badge: 'https://verify.skilljar.com/c/s672ysjj6x94',
+  },
+  {
+    keys: ['activeloop', 'gen ai 360', 'intel'],
+    title: 'Gen AI 360: LangChain & LlamaIndex in Production — Certified by Activeloop & Intel',
+    pdf: '/Activeloop_GenAI360_Certificate.pdf',
+    badge: 'https://learn.activeloop.ai/certificates/hcfeg4flr4',
+  },
+  {
+    keys: ['salesforce', 'trailblazer'],
+    title: 'Salesforce AI & Cloud Solution Architect',
+    badge: 'https://www.salesforce.com/trailblazer/profile',
+  },
+  {
+    keys: ['deloitte', 'data analytics simulation'],
+    title: 'Deloitte Data Analytics Job Simulation',
+    pdf: '/Deloitte_Data_Analytics_Simulation.pdf',
+  },
+  {
+    keys: ['job simulation', 'forage', 'simulation'],
+    title: 'Forage Job Simulations',
+    pdf: '/Forage_Job_Simulations.pdf',
+  },
+]
+
 const QUICK_SUGGESTIONS = [
   'Who is Rittik?',
   'What are his skills?',
@@ -569,14 +668,65 @@ function composeAnswers(answers) {
   return "Here's what I found:\n\n• " + unique.map((a) => a.replace(/\n/g, ' ')).join('\n\n• ')
 }
 
+function findDirectAction(question) {
+  const q = normalize(question)
+  const asking = /\b(show|give|open|link|download|see|view|need|want|print|certificate|certificates|pdf|badge|badges|send)\b/.test(q)
+
+  if (/\b(resume|cv)\b/.test(q)) {
+    return "Absolutely — here's Rittik's resume:\n\n/Rittik_Pati_AI_Engineer_Resume.pdf\n\nIt opens in a new tab. If you'd like, I can also share his certifications with direct links."
+  }
+
+  if (/\boffer letters?\b/.test(q)) {
+    return "Here are both of Rittik's offer letters:\n\n• YuvaIntern: /OfferLetter.pdf\n• Thiranex: /Thiranex_OfferLetter.pdf"
+  }
+
+  if (/\b(all certifications|list.*certification|certification.*list|all his certification|his certificates|all certificates)\b/.test(q)) {
+    const items = CERT_LINKS.map((c) => `• ${c.title}${c.pdf ? ` — ${c.pdf}` : ''}${c.badge ? `\n  Badge: ${c.badge}` : ''}`)
+    return `Here are all of Rittik's certifications with direct links:\n\n${items.join('\n')}`
+  }
+
+  if (/\b(github|source code|repo|repository|code)\b/.test(q) && asking) {
+    return "Here's Rittik's GitHub: https://github.com/rittikpati\n\nYou'll find his project source code there, including RittikDesk AI."
+  }
+
+  if (!asking) return null
+
+  const tokens = tokenize(question).map(stem)
+  let best = null
+  let bestScore = 0
+  for (const cert of CERT_LINKS) {
+    let score = 0
+    for (const phrase of cert.keys) {
+      if (q.includes(phrase) && phrase.length > 3) {
+        score += 4
+        continue
+      }
+      for (const token of tokenize(phrase).map(stem)) {
+        if (tokens.includes(token)) score += 1
+      }
+    }
+    if (score > bestScore) {
+      bestScore = score
+      best = cert
+    }
+  }
+  if (!best || bestScore === 0) return null
+
+  const lines = [`Here's ${best.title}:`]
+  if (best.pdf) lines.push(`\n${best.pdf}`)
+  if (best.badge) lines.push(`\nVerified badge: ${best.badge}`)
+  lines.push(`\nBoth open in a new tab.`)
+  return lines.join('\n')
+}
+
 function renderAnswer(text) {
   const paragraphs = text.split('\n\n')
   return paragraphs.map((para, i) => {
-    const parts = para.split(/(https?:\/\/[^\s]+)/g)
+    const parts = para.split(/(https?:\/\/[^\s]+|\/[A-Za-z0-9_\-./]+\.pdf)/g)
     return (
       <p key={i} className={paragraphs.length > 1 ? 'mb-2' : ''}>
         {parts.map((part, j) =>
-          /^https?:\/\//.test(part) ? (
+          /^https?:\/\//.test(part) || /^\/[A-Za-z0-9_\-./]+\.pdf$/.test(part) ? (
             <a
               key={j}
               className="text-primary underline hover:text-primary-fixed transition-colors"
@@ -637,6 +787,9 @@ export default function HelpDesk() {
       const entry = KNOWLEDGE_BASE.find((e) => e.keywords.some((k) => k.includes('what can you do')))
       return entry.answer
     }
+
+    const direct = findDirectAction(q)
+    if (direct) return direct
 
     const concept = findConcept(q)
     if (concept) return concept
