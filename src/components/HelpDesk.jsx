@@ -217,7 +217,7 @@ const KNOWLEDGE_BASE = [
   {
     keywords: ['experience', 'internship', 'intern', 'work', 'job', 'yuvaintern', 'thiranex', 'career', 'professional', 'fresher', 'how many internships', 'years of experience'],
     answer:
-      "Rittik has two internships: (1) AI Business Solutions Architect Intern at YuvaIntern (Aug 2026 – Present) — integrated DeepSeek API and RAG workflows into enterprise solutions, reducing query latency by 35%. (2) Intern - Full Stack Development at Thiranex (Jul 2026 – Aug 2026) — project-based remote internship working on practical full-stack projects under industry mentorship. You can view both offer letters from the Experience section.",
+      "Rittik has two internships: (1) AI Business Solutions Architect Intern at YuvaIntern (Aug 2026 – Present) — integrated DeepSeek API and RAG workflows into enterprise solutions, reducing query latency by 35%. (2) Intern - Full Stack Development at Thiranex (Jul 2026 – Aug 2026) — project-based remote internship working on practical full-stack projects under industry mentorship. He also completed a Deloitte Data Analytics Job Simulation via Forage (July 2026). You can view both offer letters from the Experience section.",
     extended:
       "Both internships are remote. His current focus is building RAG and agentic AI workflows that cut query latency and improve response quality at enterprise scale.",
   },
@@ -241,7 +241,12 @@ const KNOWLEDGE_BASE = [
   {
     keywords: ['certification', 'certificate', 'certified', 'oracle', 'mongodb', 'microsoft', 'azure', 'credential', 'badge', 'courses', 'course'],
     answer:
-      "Rittik holds: Oracle Cloud Infrastructure Certified Architect Associate (August 2026), Oracle Cloud Infrastructure Certified AI Foundations Associate (August 2026), Oracle Agentic AI Certified Foundations Associate (July 2026), Building RAG Applications Using MongoDB (July 2026), and Microsoft Certified: AI Solutions & Azure Cloud Fundamentals (July 2026). He also completed LinkedIn Learning courses in Generative AI & AI Literacy (July 2026). You can view his certificate PDFs and badges directly from the Certifications section of this site.",
+      "Rittik holds: Oracle Cloud Infrastructure Certified Architect Associate (August 2026), Oracle Cloud Infrastructure Certified AI Foundations Associate (August 2026), Oracle Agentic AI Certified Foundations Associate (July 2026), Building RAG Applications Using MongoDB (July 2026), and Microsoft Certified: AI Solutions & Azure Cloud Fundamentals (July 2026). He also holds a Database and SQL certificate certified by Infosys (September 2025), a Machine Learning Using Python certificate from Simplilearn SkillUp (September 2025), 10 AWS Training & Certification certificates in Cloud, Containers and Machine Learning (September 2025), four LangChain Academy certificates including Building Reliable Agents (July 2026), and Hugging Face certifications in LLMs and AI Agents (July 2026), plus an advanced Model Context Protocol (MCP) certification from Anthropic (July 2026), and Gen AI 360 certifications in LangChain, LlamaIndex and Vector Databases from Activeloop & Intel (July 2026), completed the Career Essentials in Generative AI by Microsoft & LinkedIn learning path (July 2026), and other LinkedIn Learning courses in Generative AI & AI Literacy (July 2026). You can view his certificate PDFs and badges directly from the Certifications section of this site.",
+  },
+  {
+    keywords: ['job simulation', 'simulation', 'forage', 'mastercard', 'tata', 'datacom', 'bcg', 'skyscanner', 'goldman', 'walmart', 'commonwealth'],
+    answer:
+      "Rittik has completed 10 hands-on Forage job simulations (July 2026) with global companies: Mastercard (Cybersecurity), Tata Consultancy Services (Partnering with AI in the Workplace), DATACOM (Automation AI Accelerator), BCG X (GenAI), Skyscanner (Software Engineering), Goldman Sachs (Operations), Walmart Global Tech (Advanced Software Engineering), Commonwealth Bank (GenAI Data Analytics & Software Engineering), and Deloitte (Data Analytics). All certificates are in the Job Simulations section of this site.",
   },
   {
     keywords: ['leadership', 'mentor', 'mentorship', 'open source', 'open-source', 'community', 'students', 'teaching', 'guide', 'volunteer'],
@@ -278,7 +283,7 @@ const KNOWLEDGE_BASE = [
   {
     keywords: ['navigate', 'sections', 'how to use this website', 'how to browse', 'menu', 'pages'],
     answer:
-      "This is a single-page site: use the top navigation (Projects, Skills, Experience, Contact) or simply scroll — sections appear in order: Projects, Skills, Experience, Certifications, Leadership, Contact. The chat button stays at the bottom-right on every screen.",
+      "This is a single-page site: use the top navigation (Projects, Skills, Experience, Contact) or simply scroll — sections appear in order: Projects, Skills, Experience, Job Simulations, Certifications, Leadership, Contact. The chat button stays at the bottom-right on every screen.",
   },
   {
     keywords: ['location', 'where', 'based', 'country', 'india', 'live', 'remote', 'city', 'timezone'],
