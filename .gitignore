@@ -1,26 +1,41 @@
+# Dependencies
 node_modules/
+
+# Environment & secrets
 .env
 .env.*
 !.env.example
+*.local
 
-venv/
-.venv/
-__pycache__/
-*.py[cod]
-
+# Build output
 dist/
 build/
 .cache/
 .vite/
 
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
+# OS noise
 .DS_Store
 Thumbs.db
 
-coverage/
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
 .pytest_cache/
 .mypy_cache/
 
+# Editor
+.idea/
+.vscode/
+*.tsbuildinfo
+
+# Framework caches
 .next/
 out/

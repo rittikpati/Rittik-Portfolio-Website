@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="font-label-caps text-label-caps text-on-surface-variant">
           © 2024 Rittik Pati. Engineered for Performance.
         </div>
-        <ul className="flex items-center gap-6">
+        <ul className="flex items-center justify-center flex-wrap gap-4 md:gap-6">
           {FOOTER_LINKS.map((link) => (
             <li key={link.label}>
               <a

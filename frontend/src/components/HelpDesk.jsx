@@ -863,7 +863,7 @@ export default function HelpDesk() {
 
   return (
     <>
-      <div className="fixed bottom-6 right-6 z-[60]">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[60]">
         {!open && (
           <span className="absolute inset-0 rounded-full bg-primary/30 animate-ping" aria-hidden="true" />
         )}
@@ -880,7 +880,7 @@ export default function HelpDesk() {
 
       <div
         aria-label="Rittik AI Help Desk chat"
-        className={`fixed bottom-24 right-6 z-[60] w-[370px] max-w-[calc(100vw-48px)] h-[500px] max-h-[calc(100vh-140px)] glass-card rounded-2xl flex flex-col overflow-hidden shadow-2xl shadow-black/50 transition-all duration-300 ${
+        className={`fixed bottom-24 right-3 sm:right-6 z-[60] w-[370px] max-w-[calc(100vw-24px)] h-[500px] max-h-[calc(100vh-140px)] glass-card rounded-2xl flex flex-col overflow-hidden shadow-2xl shadow-black/50 transition-all duration-300 ${
           open ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
         role="dialog"

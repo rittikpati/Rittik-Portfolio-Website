@@ -75,9 +75,9 @@ export default function Skills() {
             </div>
             <ul className="space-y-4">
               {group.skills.map((skill) => (
-                <li key={skill.name} className="flex items-center justify-between">
-                  <span className="font-body-md text-body-md text-on-surface">{skill.name}</span>
-                  <div className="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden">
+                <li key={skill.name} className="flex items-center justify-between gap-3">
+                  <span className="font-body-md text-body-md text-on-surface min-w-0">{skill.name}</span>
+                  <div className="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden shrink-0">
                     <div className={`h-full bg-primary ${skill.level} rounded-full`} />
                   </div>
                 </li>

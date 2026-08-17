@@ -5,7 +5,7 @@ export default function Hero() {
       id="hero"
     >
       <div className="max-w-3xl relative z-10 text-left">
-        <h1 className="text-5xl md:text-7xl font-display-lg font-bold text-primary mb-stack-md leading-tight drop-shadow-md">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-display-lg font-bold text-primary mb-stack-md leading-tight drop-shadow-md">
           Welcome to Rittik Pati's Portfolio
         </h1>
         <h2 className="font-headline-md text-headline-md md:text-3xl text-on-surface mb-stack-lg leading-tight drop-shadow-md">

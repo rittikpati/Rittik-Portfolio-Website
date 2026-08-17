@@ -1,73 +1,100 @@
-# Rittik Portfolio Website
+# Rittik Pati — Portfolio Website
 
-Personal portfolio website for **Rittik Pati — AI/ML Engineer**, built with React and Tailwind CSS, powered by Vite.
+Personal portfolio website for **Rittik Pati — AI/ML Engineer**, built with React, Tailwind CSS and Vite, served in production by a small Express backend.
 
 ## Tech Stack
 
-- **React 18** — component-based UI
-- **Vite 5** — fast build tooling and dev server
-- **Tailwind CSS 3** — utility-first styling with a custom Material 3 design token system
-- **Google Fonts** — Geist, Inter, and JetBrains Mono
+**Frontend**
+- React 18 — component-based UI
+- Vite 5 — fast build tooling and dev server
+- Tailwind CSS 3 — utility-first styling with a custom Material 3 design token system
+- Google Fonts — Geist, Inter, and JetBrains Mono
 
-## Getting Started
+**Backend**
+- Express 4 — serves the production build, SPA fallback, and a minimal `/api/health` endpoint
+- dotenv — environment-driven configuration
 
-### Local Preview (your machine only)
+**Deployment**
+- Multi-stage `Dockerfile` (frontend build → slim runtime) and `docker-compose.yml`
+- Environment configuration via `.env` (see `.env.example`)
 
-```bash
-npm install
-npm run build
+## Project Structure
+
+```
+.
+├── frontend/                 # React + Vite application
+│   ├── src/
+│   │   ├── main.jsx          # React root
+│   │   ├── App.jsx           # Layout + scroll/crossfade effects
+│   │   ├── index.css         # Tailwind + custom design tokens
+│   │   └── components/       # Section components (Navbar, Hero, Skills, HelpDesk, ...)
+│   ├── public/               # Static assets served as-is (PDFs, logos)
+│   ├── index.html            # Vite entry point
+│   ├── tailwind.config.js    # Design tokens (colors, typography, spacing)
+│   └── vite.config.js        # Vite configuration
+├── backend/
+│   ├── server.js             # Express server (static + health API)
+│   └── package.json
+├── Dockerfile                # Multi-stage production image
+├── docker-compose.yml        # One-command local/orchestrated deploy
+└── stitch-reference/         # Original design prototype (reference only)
 ```
 
-Then open **http://localhost:8000** in your browser.
-
-> **Note:** `localhost` links only work on the machine running the site. Visitors to your GitHub repository cannot open them — this is for local development only.
+## Getting Started
 
 ### Prerequisites
 
 - Node.js 18 or higher
 - npm
 
-### Installation
+### Frontend — Development
 
 ```bash
+cd frontend
 npm install
-```
-
-### Development
-
-```bash
 npm run dev
 ```
 
-Runs the app in development mode with hot reload. Vite will print the local dev server URL in your terminal.
+Vite starts the dev server with hot reload and prints the URL (default http://localhost:5173).
 
-### Production Build
+### Frontend — Production Build
 
 ```bash
+cd frontend
+npm install
 npm run build
 ```
 
-Builds the app for production into the `dist/` folder.
+Outputs the production bundle to `frontend/dist/`.
 
-### Preview the Production Build
+### Backend — Local Preview of the Production Build
 
 ```bash
-npm run preview
+cd backend
+npm install
+npm start
 ```
 
-## Project Structure
+The Express server serves `frontend/dist/` at **http://localhost:8000** (port configurable via `PORT` in `.env` — copy the root `.env.example` to `.env` first).
 
+Health check: http://localhost:8000/api/health
+
+> **Note:** local URLs only work on the machine running the server — they are for local development/preview only.
+
+### Docker
+
+```bash
+docker compose up --build
 ```
-├── index.html              # Vite entry point
-├── src/
-│   ├── main.jsx            # React root
-│   ├── App.jsx             # Layout + scroll/crossfade effects
-│   ├── index.css           # Tailwind + custom design tokens
-│   └── components/         # Section components (Navbar, Hero, Skills, ...)
-├── tailwind.config.js      # Design tokens (colors, typography, spacing)
-├── vite.config.js          # Vite configuration
-└── stitch-reference/       # Original Google Stitch design prototype (reference only)
-```
+
+Builds the frontend, packages everything into a slim image, and serves it on port `8000`.
+
+## API
+
+| Method | Route         | Description                |
+| ------ | ------------- | -------------------------- |
+| GET    | `/api/health` | Service health + metadata  |
+| GET    | `*`           | SPA fallback (HTML)        |
 
 ## Features
 
@@ -75,7 +102,8 @@ npm run preview
 - Scroll-reveal animations
 - Glassmorphism card design system
 - Responsive layout (mobile, tablet, desktop)
-- Sections: Projects, Skills, Experience, Research, Certifications, Leadership, Contact
+- Sections: Projects, Skills, Experience, Job Simulations, Certifications, Leadership, Contact
+- AI Help Desk — a rule-based portfolio assistant with direct link actions (resume, certificates, badges)
 
 ## License
 
