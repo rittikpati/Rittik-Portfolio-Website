@@ -1,5 +1,5 @@
-const CERTIFICATIONS = [
-{
+﻿const CERTIFICATIONS = [
+  {
     title: 'Oracle Cloud Infrastructure Certified Architect Associate',
     year: 'August 2026',
     logo: '/logos/oracle.png',
@@ -113,34 +113,41 @@ const CERTIFICATIONS = [
 export default function Certifications() {
   return (
     <section
-      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view"
+      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/10 in-view"
       id="certifications"
     >
-      <div className="mb-stack-lg reveal in-view">
-        <h2 className="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">
-          Certifications
-        </h2>
-        <p className="font-body-md text-body-md text-on-surface-variant drop-shadow-sm">
-          Professional credentials and specialized training.
-        </p>
+      <div className="section-head">
+        <div>
+          <span className="eyebrow mb-4 block">Credentials</span>
+          <h2 className="font-headline-md text-headline-md md:text-3xl text-primary">
+            Certifications
+          </h2>
+          <p className="font-body-md text-body-md text-on-surface-variant mt-2">
+            Professional credentials and specialized training.
+          </p>
+        </div>
+        <span className="section-index">07 — CERTIFICATIONS</span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {CERTIFICATIONS.map((cert) => (
-          <div key={cert.title} className="glass-card rounded-xl p-6 flex flex-col gap-3">
-            <span className="material-symbols-outlined text-surface-tint">verified</span>
-            {cert.logo && (
-              <img
-                alt={`${cert.title} logo`}
-                className="w-10 h-10 object-contain rounded-md bg-white p-1.5"
-                loading="lazy"
-                src={cert.logo}
-              />
-            )}
-            <h3 className="font-body-md text-body-md font-semibold text-on-surface">
-              {cert.title}
-            </h3>
-            <p className="text-code-sm text-on-surface-variant">{cert.year}</p>
-            <div className="flex gap-2 flex-wrap mt-auto">
+          <div key={cert.title} className="cert-card">
+            <div className="flex items-start gap-3">
+              {cert.logo && (
+                <img
+                  alt={`${cert.title} logo`}
+                  className="cert-logo"
+                  loading="lazy"
+                  src={cert.logo}
+                />
+              )}
+              <div className="min-w-0">
+                <h3 className="font-body-md text-body-md font-semibold text-on-surface leading-snug">
+                  {cert.title}
+                </h3>
+                <p className="text-code-sm text-on-surface-variant mt-1">{cert.year}</p>
+              </div>
+            </div>
+            <div className="flex gap-2 flex-wrap mt-auto pt-1">
               {cert.link && (
                 <a
                   className="tech-tag self-start rounded px-2 py-1 font-code-sm text-[12px] inline-flex items-center gap-1 hover:bg-primary/10 transition-colors"

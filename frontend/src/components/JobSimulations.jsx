@@ -1,4 +1,4 @@
-const SIMULATIONS = [
+﻿const SIMULATIONS = [
   {
     company: 'Mastercard',
     logo: '/logos/mastercard.png',
@@ -52,24 +52,28 @@ const SIMULATIONS = [
 export default function JobSimulations() {
   return (
     <section
-      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view"
+      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/10 in-view"
       id="job-simulations"
     >
-      <div className="mb-stack-lg reveal in-view">
-        <h2 className="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">
-          Job Simulations
-        </h2>
-        <p className="font-body-md text-body-md text-on-surface-variant drop-shadow-sm">
-          Hands-on Forage job simulations completed with global companies.
-        </p>
+      <div className="section-head">
+        <div>
+          <span className="eyebrow mb-4 block">Hands-On Practice</span>
+          <h2 className="font-headline-md text-headline-md md:text-3xl text-primary">
+            Job Simulations
+          </h2>
+          <p className="font-body-md text-body-md text-on-surface-variant mt-2">
+            Hands-on Forage job simulations completed with global companies.
+          </p>
+        </div>
+        <span className="section-index">05 — SIMULATIONS</span>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {SIMULATIONS.map((sim) => (
-          <div key={sim.company} className="glass-card rounded-xl p-5 flex flex-col gap-3">
+          <div key={sim.company} className="sim-card">
             <div className="flex items-center gap-3">
               <img
                 alt={`${sim.company} logo`}
-                className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0"
+                className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0 border border-white/10"
                 loading="lazy"
                 src={sim.logo}
               />

@@ -1,4 +1,4 @@
-const FOOTER_LINKS = [
+﻿const FOOTER_LINKS = [
   { label: 'GitHub', href: 'https://github.com/rittikpati' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/rittik-pati-229389290/' },
   { label: 'Instagram', href: 'https://www.instagram.com/rittikpati/' },
@@ -7,7 +7,7 @@ const FOOTER_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-surface-container-lowest/80 backdrop-blur-md w-full py-stack-lg border-t border-white/5 reveal in-view">
+    <footer className="bg-surface/60 backdrop-blur-md w-full py-stack-lg border-t border-white/10 reveal in-view">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-gutter gap-stack-md">
         <div className="font-label-caps text-label-caps text-on-surface-variant">
           © {new Date().getFullYear()} Rittik Pati. Engineered for Performance.
@@ -16,7 +16,7 @@ export default function Footer() {
           {FOOTER_LINKS.map((link) => (
             <li key={link.label}>
               <a
-                className="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md"
+                className="footer-link font-body-md text-body-md"
                 href={link.href}
                 rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 target={link.href.startsWith('http') ? '_blank' : undefined}
@@ -26,6 +26,14 @@ export default function Footer() {
             </li>
           ))}
         </ul>
+        <a
+          aria-label="Back to top"
+          className="back-to-top"
+          href="#hero"
+          rel="noopener noreferrer"
+        >
+          <span className="material-symbols-outlined text-[18px]">arrow_upward</span>
+        </a>
       </div>
     </footer>
   )

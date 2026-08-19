@@ -1,35 +1,42 @@
-export default function Experience() {
+﻿export default function Experience() {
   return (
     <section
-      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view"
+      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/10 in-view"
       id="experience"
     >
-      <div className="mb-stack-lg reveal in-view">
-        <h2 className="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">
-          Experience & Education
-        </h2>
+      <div className="section-head">
+        <div>
+          <span className="eyebrow mb-4 block">Career & Academics</span>
+          <h2 className="font-headline-md text-headline-md md:text-3xl text-primary">
+            Experience & Education
+          </h2>
+        </div>
+        <span className="section-index">03 — EXPERIENCE</span>
       </div>
-      <div className="max-w-3xl relative border-l border-white/10 ml-3 md:ml-0 pl-6 md:pl-10 space-y-12">
-        <div className="relative reveal in-view">
-          <span className="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10" />
-          <div className="glass-card rounded-xl p-6">
-            <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+      <div className="max-w-3xl space-y-10">
+        <div className="timeline-item reveal in-view">
+          <span className="timeline-dot" />
+          <div className="timeline-card">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
               <div className="flex items-center gap-3">
                 <img
                   alt="Skill Nexis logo"
-                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0"
+                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0 border border-white/10"
                   loading="lazy"
                   src="/logos/skillnexis.svg"
                 />
-                <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
-                  Machine Learning & AI Intern
-                </h3>
+                <div>
+                  <h3 className="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">
+                    Machine Learning & AI Intern
+                  </h3>
+                  <p className="font-code-sm text-code-sm text-on-surface-variant mt-0.5">
+                    Skill Nexis
+                  </p>
+                </div>
               </div>
-              <span className="font-code-sm text-code-sm text-primary bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
-                Skill Nexis • 08/2026 – 09/2026
-              </span>
+              <span className="time-chip self-start md:self-auto">08/2026 – 09/2026</span>
             </div>
-            <p className="font-body-md text-body-md text-on-surface-variant mb-4">
+            <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
               Selected for an AICTE & MSME-approved online Machine Learning & AI internship at
               Skill Nexis — building real ML models and AI applications through hands-on,
               project-based work: data preprocessing, model training and evaluation under expert
@@ -51,26 +58,29 @@ export default function Experience() {
             </div>
           </div>
         </div>
-        <div className="relative reveal in-view">
-          <span className="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10" />
-          <div className="glass-card rounded-xl p-6">
-            <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+        <div className="timeline-item reveal in-view">
+          <span className="timeline-dot" />
+          <div className="timeline-card">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
               <div className="flex items-center gap-3">
                 <img
                   alt="YuvaIntern logo"
-                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0"
+                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0 border border-white/10"
                   loading="lazy"
                   src="/logos/yuvaintern.png"
                 />
-                <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
-                  AI Business Solutions Architect Intern
-                </h3>
+                <div>
+                  <h3 className="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">
+                    AI Business Solutions Architect Intern
+                  </h3>
+                  <p className="font-code-sm text-code-sm text-on-surface-variant mt-0.5">
+                    YuvaIntern
+                  </p>
+                </div>
               </div>
-              <span className="font-code-sm text-code-sm text-primary bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
-                YuvaIntern • 08/2026 – Present
-              </span>
+              <span className="time-chip self-start md:self-auto">08/2026 – Present</span>
             </div>
-            <p className="font-body-md text-body-md text-on-surface-variant mb-4">
+            <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
               Integrated DeepSeek API and RAG workflows into enterprise solutions, significantly
               improving internal operations and reducing query latency by 35%.
             </p>
@@ -90,26 +100,29 @@ export default function Experience() {
             </div>
           </div>
         </div>
-        <div className="relative reveal in-view">
-          <span className="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10" />
-          <div className="glass-card rounded-xl p-6">
-            <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+        <div className="timeline-item reveal in-view">
+          <span className="timeline-dot" />
+          <div className="timeline-card">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
               <div className="flex items-center gap-3">
                 <img
                   alt="Thiranex logo"
-                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0"
+                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0 border border-white/10"
                   loading="lazy"
                   src="/logos/thiranex.png"
                 />
-                <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
-                  Intern - Full Stack Development
-                </h3>
+                <div>
+                  <h3 className="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">
+                    Intern - Full Stack Development
+                  </h3>
+                  <p className="font-code-sm text-code-sm text-on-surface-variant mt-0.5">
+                    Thiranex
+                  </p>
+                </div>
               </div>
-              <span className="font-code-sm text-code-sm text-primary bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
-                Thiranex • 07/2026 – 08/2026
-              </span>
+              <span className="time-chip self-start md:self-auto">07/2026 – 08/2026</span>
             </div>
-            <p className="font-body-md text-body-md text-on-surface-variant mb-4">
+            <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
               Project-based internship in full-stack development, working on practical projects
               under industry mentorship in a remote work model.
             </p>
@@ -126,26 +139,29 @@ export default function Experience() {
             </div>
           </div>
         </div>
-        <div className="relative reveal in-view">
-          <span className="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10" />
-          <div className="glass-card rounded-xl p-6">
-            <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+        <div className="timeline-item reveal in-view">
+          <span className="timeline-dot" />
+          <div className="timeline-card">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
               <div className="flex items-center gap-3">
                 <img
                   alt="Deloitte logo"
-                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0"
+                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0 border border-white/10"
                   loading="lazy"
                   src="/logos/deloitte.png"
                 />
-                <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
-                  Data Analytics Job Simulation
-                </h3>
+                <div>
+                  <h3 className="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">
+                    Data Analytics Job Simulation
+                  </h3>
+                  <p className="font-code-sm text-code-sm text-on-surface-variant mt-0.5">
+                    Deloitte
+                  </p>
+                </div>
               </div>
-              <span className="font-code-sm text-code-sm text-primary bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
-                Deloitte • 07/2026
-              </span>
+              <span className="time-chip self-start md:self-auto">07/2026</span>
             </div>
-            <p className="font-body-md text-body-md text-on-surface-variant mb-4">
+            <p className="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
               Completed a hands-on job simulation with Deloitte, working on practical tasks in data
               analysis and forensic technology.
             </p>
@@ -166,25 +182,32 @@ export default function Experience() {
             </div>
           </div>
         </div>
-        <div className="relative pt-6 reveal in-view">
-          <span className="absolute -left-[33px] md:-left-[49px] top-10 w-4 h-4 bg-surface border-[3px] border-white/20 rounded-full z-10" />
-          <div className="flex items-center gap-2 mb-4">
-            <span className="material-symbols-outlined text-on-surface-variant">school</span>
-            <h4 className="font-label-caps text-label-caps text-on-surface-variant">EDUCATION</h4>
-          </div>
-          <div className="glass-card rounded-xl p-6">
-            <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
-              <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
-                B.Tech CSE - AI & ML
-              </h3>
-              <span className="font-code-sm text-code-sm text-on-surface-variant bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
-                Chandigarh University • 2023 - 2027
-              </span>
+        <div className="timeline-item pt-2 reveal in-view">
+          <span className="timeline-dot bg-surface border-white/30" />
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="material-symbols-outlined text-on-surface-variant">school</span>
+              <h4 className="font-label-caps text-label-caps text-on-surface-variant">EDUCATION</h4>
             </div>
-            <p className="font-body-md text-body-md text-on-surface-variant">
-              CGPA: 8.2/10. Specialized in Generative AI, Neural Networks, and Scalable Data
-              Systems.
-            </p>
+            <div className="timeline-card">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
+                <div>
+                  <h3 className="font-body-lg text-body-lg text-on-surface font-semibold leading-tight">
+                    B.Tech CSE - AI & ML
+                  </h3>
+                  <p className="font-code-sm text-code-sm text-on-surface-variant mt-0.5">
+                    Chandigarh University
+                  </p>
+                </div>
+                <span className="time-chip self-start md:self-auto border-white/20 bg-surface-container-lowest text-on-surface-variant">
+                  2023 - 2027
+                </span>
+              </div>
+              <p className="font-body-md text-body-md text-on-surface-variant">
+                CGPA: 8.2/10. Specialized in Generative AI, Neural Networks, and Scalable Data
+                Systems.
+              </p>
+            </div>
           </div>
         </div>
       </div>

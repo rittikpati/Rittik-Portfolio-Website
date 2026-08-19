@@ -1,4 +1,4 @@
-const ORACLE_EXAMS = [
+﻿const ORACLE_EXAMS = [
   {
     name: 'OCI Architect Associate',
     badge: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=7D89F607AB00AD005C6F0E8E55D7CFAC3EBCC7E4C50B70ACC67A255DBCFF7AA9',
@@ -43,28 +43,32 @@ const ACHIEVEMENTS = [
 export default function Achievements() {
   return (
     <section
-      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view"
+      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/10 in-view"
       id="achievements"
     >
-      <div className="mb-stack-lg reveal in-view">
-        <h2 className="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">
-          Achievements
-        </h2>
-        <p className="font-body-md text-body-md text-on-surface-variant drop-shadow-sm">
-          Milestones earned the hard way — exams, credentials and recognition.
-        </p>
+      <div className="section-head">
+        <div>
+          <span className="eyebrow mb-4 block">Proven Track Record</span>
+          <h2 className="font-headline-md text-headline-md md:text-3xl text-primary">
+            Achievements
+          </h2>
+          <p className="font-body-md text-body-md text-on-surface-variant mt-2">
+            Milestones earned the hard way — exams, credentials and recognition.
+          </p>
+        </div>
+        <span className="section-index">04 — ACHIEVEMENTS</span>
       </div>
       <div className="flex flex-col gap-4">
-        <div className="glass-card rounded-xl p-5 sm:p-6 flex flex-col gap-4">
-          <div className="flex flex-wrap items-center gap-3">
+        <div className="project-card p-5 sm:p-7 flex flex-col gap-5">
+          <div className="flex flex-wrap items-center gap-4">
             <img
               alt="Oracle logo"
-              className="w-11 h-11 object-contain rounded-md bg-white p-1.5 shrink-0"
+              className="w-12 h-12 object-contain rounded-lg bg-white p-1.5 shrink-0 border border-white/10"
               loading="lazy"
               src="/logos/oracle.png"
             />
             <div>
-              <h3 className="font-body-md text-body-md font-semibold text-on-surface leading-tight">
+              <h3 className="font-body-lg text-body-lg font-semibold text-on-surface leading-tight">
                 Cleared 3 Oracle Certification Exams — Online Proctored
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
@@ -103,8 +107,8 @@ export default function Achievements() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {ACHIEVEMENTS.map((item) => (
-            <div key={item.title} className="glass-card rounded-xl p-5 flex flex-col gap-3">
-              <span className="material-symbols-outlined text-primary text-2xl">{item.icon}</span>
+            <div key={item.title} className="ach-card flex flex-col gap-3">
+              <span className="ach-icon material-symbols-outlined text-[22px]">{item.icon}</span>
               <h3 className="font-body-md text-body-md font-semibold text-on-surface leading-tight">
                 {item.title}
               </h3>

@@ -1,4 +1,4 @@
-const SKILL_GROUPS = [
+﻿const SKILL_GROUPS = [
   {
     icon: 'psychology',
     title: 'AI & Generative AI',
@@ -53,33 +53,39 @@ const SKILL_GROUPS = [
 export default function Skills() {
   return (
     <section
-      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/5 in-view"
+      className="reveal py-section-gap px-gutter max-w-container-max mx-auto border-t border-white/10 in-view"
       id="skills"
     >
-      <div className="mb-stack-lg reveal in-view">
-        <h2 className="font-headline-md text-headline-md text-primary mb-stack-sm drop-shadow-sm">
-          Technical Arsenal
-        </h2>
-        <p className="font-body-md text-body-md text-on-surface-variant drop-shadow-sm">
-          Core competencies and preferred tooling.
-        </p>
+      <div className="section-head">
+        <div>
+          <span className="eyebrow mb-4 block">Core Competencies</span>
+          <h2 className="font-headline-md text-headline-md md:text-3xl text-primary">
+            Technical Arsenal
+          </h2>
+          <p className="font-body-md text-body-md text-on-surface-variant mt-2">
+            Core competencies and preferred tooling.
+          </p>
+        </div>
+        <span className="section-index">01 — SKILLS</span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
         {SKILL_GROUPS.map((group) => (
-          <div key={group.title} className="glass-card rounded-xl p-6 reveal in-view">
-            <div className="flex items-center gap-3 mb-stack-md border-b border-white/5 pb-stack-sm">
-              <span className="material-symbols-outlined text-surface-tint">{group.icon}</span>
+          <div key={group.title} className="skill-group flex flex-col">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="skill-group-icon material-symbols-outlined text-[20px]">
+                {group.icon}
+              </span>
               <h3 className="font-body-lg text-body-lg font-semibold text-on-surface">
                 {group.title}
               </h3>
             </div>
-            <ul className="space-y-4">
+            <ul className="flex flex-wrap gap-2">
               {group.skills.map((skill) => (
-                <li key={skill.name} className="flex items-center justify-between gap-3">
-                  <span className="font-body-md text-body-md text-on-surface min-w-0">{skill.name}</span>
-                  <div className="h-1.5 w-16 bg-surface-container-highest rounded-full overflow-hidden shrink-0">
-                    <div className={`h-full bg-primary ${skill.level} rounded-full`} />
-                  </div>
+                <li key={skill.name} className="skill-pill">
+                  <span className="material-symbols-outlined text-[14px] text-primary">
+                    check_circle
+                  </span>
+                  {skill.name}
                 </li>
               ))}
             </ul>
