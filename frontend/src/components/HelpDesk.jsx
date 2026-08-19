@@ -285,12 +285,22 @@ const KNOWLEDGE_BASE = [
   {
     keywords: ['website', 'this site', 'built with', 'react', 'tailwind', 'vite', 'framework', 'code', 'tech stack of', 'source code', 'open source website'],
     answer:
-      "This website is built with React 18, Tailwind CSS 3 (custom Material 3 design tokens), and Vite — a production-grade frontend stack with scroll-reveal animations, glassmorphism cards, and a cinematic background crossfade. Its source is on his GitHub: github.com/rittikpati.",
+      "This website is built with React 18, Tailwind CSS 3 (custom Material 3 design tokens), and Vite — a production-grade frontend stack with scroll-reveal animations, glassmorphism cards, and a cinematic background crossfade. It's deployed on Vercel and served by a small Express (Node.js) backend with a health API. Its source is on his GitHub: github.com/rittikpati.",
+  },
+  {
+    keywords: ['backend', 'api', 'health', 'healthcheck', 'server', 'express', 'localhost', 'port 8000', '8000', 'vercel deployment', 'how is this hosted', 'hosting', 'hosted', 'deployed'],
+    answer:
+      "The site has a minimal Express backend (Node.js) — locally it serves the production build at http://localhost:8000 with a health check at http://localhost:8000/api/health. The backend is Vercel-ready through a serverless function, so the same API works on Vercel. The frontend itself is fully static — all AI help desk logic runs in your browser, so the site works even without the API.",
+  },
+  {
+    keywords: ['repos', 'repositories', 'repo list', 'his github', 'portfolio repo', 'rittik-portfolio-website', 'rittikdesk repo', 'what repos'],
+    answer:
+      "Rittik's GitHub is https://github.com/rittikpati — his main repositories are Rittik-Portfolio-Website (this portfolio site: React + Tailwind + Express) and RittikDesk-AI (his AI-powered CRM built with Django). He also shares Hugging Face course solutions, AirCanvas-Pro (OpenCV + MediaPipe air drawing), and more.",
   },
   {
     keywords: ['navigate', 'sections', 'how to use this website', 'how to browse', 'menu', 'pages'],
     answer:
-      "This is a single-page site: use the top navigation (Projects, Skills, Experience, Contact) or simply scroll — sections appear in order: Projects, Skills, Experience, Job Simulations, Certifications, Leadership, Contact. The chat button stays at the bottom-right on every screen.",
+      "This is a single-page site: use the top navigation (Projects, Skills, Experience, Contact) or simply scroll — sections appear in order: Projects, Skills, Experience, Achievements, Job Simulations, Certifications, Leadership, Contact. The chat button stays at the bottom-right on every screen.",
   },
   {
     keywords: ['location', 'where', 'based', 'country', 'india', 'live', 'remote', 'city', 'timezone'],
@@ -711,7 +721,7 @@ function findDirectAction(question) {
   }
 
   if (/\b(github|source code|repo|repository|code)\b/.test(q) && asking) {
-    return "Here's Rittik's GitHub: https://github.com/rittikpati\n\nYou'll find his project source code there, including RittikDesk AI."
+    return "Here's Rittik's GitHub: https://github.com/rittikpati\n\nHis main repos: Rittik-Portfolio-Website (this site) and RittikDesk-AI (his AI CRM built with Django) — plus Hugging Face course solutions and more."
   }
 
   if (/\b(summary|overview|elevator pitch|quick intro|short intro)\b/.test(q)) {
