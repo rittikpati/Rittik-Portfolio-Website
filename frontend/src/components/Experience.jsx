@@ -55,9 +55,17 @@ export default function Experience() {
           <span className="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10" />
           <div className="glass-card rounded-xl p-6">
             <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
-              <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
-                AI Business Solutions Architect Intern
-              </h3>
+              <div className="flex items-center gap-3">
+                <img
+                  alt="YuvaIntern logo"
+                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0"
+                  loading="lazy"
+                  src="/logos/yuvaintern.png"
+                />
+                <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
+                  AI Business Solutions Architect Intern
+                </h3>
+              </div>
               <span className="font-code-sm text-code-sm text-primary bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
                 YuvaIntern • 08/2026 – Present
               </span>
@@ -86,9 +94,17 @@ export default function Experience() {
           <span className="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10" />
           <div className="glass-card rounded-xl p-6">
             <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
-              <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
-                Intern - Full Stack Development
-              </h3>
+              <div className="flex items-center gap-3">
+                <img
+                  alt="Thiranex logo"
+                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0"
+                  loading="lazy"
+                  src="/logos/thiranex.png"
+                />
+                <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
+                  Intern - Full Stack Development
+                </h3>
+              </div>
               <span className="font-code-sm text-code-sm text-primary bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
                 Thiranex • 07/2026 – 08/2026
               </span>
