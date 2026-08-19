@@ -14,6 +14,47 @@ export default function Experience() {
           <span className="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10" />
           <div className="glass-card rounded-xl p-6">
             <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <img
+                  alt="Skill Nexis logo"
+                  className="w-10 h-10 object-contain rounded-md bg-white p-1.5 shrink-0"
+                  loading="lazy"
+                  src="/logos/skillnexis.svg"
+                />
+                <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
+                  Machine Learning & AI Intern
+                </h3>
+              </div>
+              <span className="font-code-sm text-code-sm text-primary bg-surface/50 px-2 py-1 rounded border border-white/5 mt-2 md:mt-0">
+                Skill Nexis • 08/2026 – 09/2026
+              </span>
+            </div>
+            <p className="font-body-md text-body-md text-on-surface-variant mb-4">
+              Selected for an AICTE & MSME-approved online Machine Learning & AI internship at
+              Skill Nexis — building real ML models and AI applications through hands-on,
+              project-based work: data preprocessing, model training and evaluation under expert
+              industry mentorship.
+            </p>
+            <div className="flex gap-2 flex-wrap">
+              <span className="tech-tag rounded px-2 py-1 font-code-sm text-[12px]">Machine Learning</span>
+              <span className="tech-tag rounded px-2 py-1 font-code-sm text-[12px]">Python</span>
+              <span className="tech-tag rounded px-2 py-1 font-code-sm text-[12px]">AI</span>
+              <a
+                className="tech-tag rounded px-2 py-1 font-code-sm text-[12px] inline-flex items-center gap-1 hover:bg-primary/10 transition-colors"
+                href="/SkillNexis_OfferLetter.pdf"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span className="material-symbols-outlined text-[14px]">description</span> View
+                Offer Letter
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="relative reveal in-view">
+          <span className="absolute -left-[33px] md:-left-[49px] top-4 w-4 h-4 bg-surface border-[3px] border-primary rounded-full z-10" />
+          <div className="glass-card rounded-xl p-6">
+            <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
               <h3 className="font-body-lg text-body-lg text-on-surface font-semibold">
                 AI Business Solutions Architect Intern
               </h3>

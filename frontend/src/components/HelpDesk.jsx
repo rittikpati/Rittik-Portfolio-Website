@@ -222,11 +222,11 @@ const KNOWLEDGE_BASE = [
       "His core programming languages are Python, SQL, JavaScript (ES6+), HTML5 and CSS3. Python is his primary language for AI/ML work, and he uses JavaScript across full-stack projects.",
   },
   {
-    keywords: ['experience', 'internship', 'intern', 'work', 'job', 'yuvaintern', 'thiranex', 'career', 'professional', 'fresher', 'how many internships', 'years of experience'],
+    keywords: ['experience', 'internship', 'intern', 'work', 'job', 'yuvaintern', 'thiranex', 'skill nexis', 'skillnexis', 'career', 'professional', 'fresher', 'how many internships', 'years of experience'],
     answer:
-      "Rittik has two internships: (1) AI Business Solutions Architect Intern at YuvaIntern (Aug 2026 – Present) — integrated DeepSeek API and RAG workflows into enterprise solutions, reducing query latency by 35%. (2) Intern - Full Stack Development at Thiranex (Jul 2026 – Aug 2026) — project-based remote internship working on practical full-stack projects under industry mentorship. He also completed a Deloitte Data Analytics Job Simulation via Forage (July 2026). You can view both offer letters from the Experience section.",
+      "Rittik has three internships: (1) Machine Learning & AI Intern at Skill Nexis (Aug 2026 – Sep 2026) — an AICTE & MSME-approved online internship building real ML models and AI applications through project-based work. (2) AI Business Solutions Architect Intern at YuvaIntern (Aug 2026 – Present) — integrated DeepSeek API and RAG workflows into enterprise solutions, reducing query latency by 35%. (3) Intern - Full Stack Development at Thiranex (Jul 2026 – Aug 2026) — project-based remote internship working on practical full-stack projects under industry mentorship. He also completed a Deloitte Data Analytics Job Simulation via Forage (July 2026). You can view all offer letters from the Experience section.",
     extended:
-      "Both internships are remote. His current focus is building RAG and agentic AI workflows that cut query latency and improve response quality at enterprise scale.",
+      "His internships are remote. His current focus is building RAG and agentic AI workflows that cut query latency and improve response quality at enterprise scale.",
   },
   {
     keywords: ['education', 'university', 'college', 'degree', 'b.tech', 'study', 'studying', 'cgpa', 'academic', 'chandigarh', 'graduate', 'graduation', 'pass out', 'passout'],
@@ -712,7 +712,7 @@ function findDirectAction(question) {
   }
 
   if (/\boffer letters?\b/.test(q)) {
-    return "Here are both of Rittik's offer letters:\n\n• YuvaIntern: /OfferLetter.pdf\n• Thiranex: /Thiranex_OfferLetter.pdf"
+    return "Here are all of Rittik's offer letters:\n\n• Skill Nexis: /SkillNexis_OfferLetter.pdf\n• YuvaIntern: /OfferLetter.pdf\n• Thiranex: /Thiranex_OfferLetter.pdf"
   }
 
   if (/\b(all certifications|list.*certification|certification.*list|all his certification|his certificates|all certificates)\b/.test(q)) {
